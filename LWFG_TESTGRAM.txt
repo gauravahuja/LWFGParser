@@ -1,0 +1,253 @@
+% start svo
+svo -> sv pobj pobj
+	[h=[cat='svo', ctype='s', dets=?q, head=?f, headC1=?j, headC2=?l, headS=?i, int=?p, nr=?t, pers=[?r, ?s], stype=?n, val='dv', vft='fin', voice='pas', vtype=?o], h1=[cat='sv', dets=?q, head=?f, headC1=?j, headC2=?l, headS=?i, int=?p, nr=?t, pers=[?r, ?s], stype=?n, val='dv', vft='fin', voice='pas', vtype=?o], h2=[cat='pobj', comp=?j, link=?f], h3=[cat='pobj', comp=?l, link=?f]]
+pobj -> prep relpro
+	[h=[case=['a', 'ng'], cat='pobj', comp=?g, ctype='s', head=?e, link=?f], h1=[cat='prep', comp=?g, head=?e, link=?f], h2=[cat='relpro', head=?g]]
+pobj -> pc
+	[h=[case=['a', 'ng'], cat='pobj', comp=?f, ctype='s', head=?d, link=?e], h1=[case=['a', 'ng'], cat='pc', comp=?f, head=?d, link=?e]]
+pc -> p n
+	[h=[case=[?anon1, ?anon2], cat='pc', comp=?g, head=?e, link=?f], h1=[cat='p', comp=?g, head=?e, link=?f], h2=[cat='n', head=?g]]
+n -> a n
+	[h=[case=[?k, ?l], cat='n', count=?o, det='no', gen=?n, head=?e, hum=?m, modr=?g, nr=?j, pers=[?h, ?i]], h1=[cat='a', mod=?e], h2=[case=[?k, ?l], cat='n', count=?o, det='no', gen=?n, head=?e, hum=?m, modr=?g, nr=?j, pers=[?h, ?i]]]
+n -> n rrcl
+	[h=[case=[?k, ?l], cat='n', count=?o, det=?g, gen=?n, head=?e, hum=?m, modr='y', nr=?j, pers=[?h, ?i]], h1=[case=[?k, ?l], cat='n', count=?o, det=?g, gen=?n, head=?e, hum=?m, modr='no', nr=?j, pers=[?h, ?i]], h2=[cat='rrcl', mod=?e]]
+rrcl -> nvo adjc
+	[h=[cat='rrcl', ctype=?i, head=?e, mod=?g, stype=?h, val=?l, vf=?k, vft='nfin', voice=?m, vtype=?j], h1=[cat='nvo', ctype=?i, head=?e, mod=?g, stype=?h, val=?l, vf=?k, vft='nfin', voice=?m, vtype=?j], h2=[cat='adjc', link=?e]]
+adjc -> pc
+	[h=[atype='s', cat='adjc', head=?d, link=?e], h1=[cat='pc', head=?d, link=?e]]
+adjc -> adv
+	[h=[atype='s', cat='adjc', link=?d], h1=[cat='adv', head=?d]]
+nvo -> nv obj pobj
+	[h=[cat='nvo', ctype=?m, head=?f, headC1=?i, headC2=?k, headS=?h, stype='no', val='dv', vf=?p, vft='nfin', voice='pas', vtype=?o], h1=[cat='nv', head=?f, headC1=?i, headC2=?h, headS=?k, val='dv', vf=?p, vft='nfin', voice='pas', vtype=?o], h2=[cat='obj', ctype=?m, head=?i], h3=[cat='pobj', comp=?k, ctype=?m, link=?f]]
+obj -> n
+	[h=[case=['a', 'ng'], cat='obj', ctype='s', head=?d], h1=[case=['a', 'ng'], cat='n', head=?d]]
+n -> noun relcl
+	[h=[case=[?k, ?l], cat='n', count=?o, det=?g, gen=?n, head=?e, hum=?m, modr='y', nr=?j, pers=[?h, ?i]], h1=[case=[?k, ?l], cat='noun', count=?o, det=?g, gen=?n, head=?e, hum=?m, modr='no', nr=?j, pers=[?h, ?i]], h2=[cat='relcl', mod=?e, nr=?j, pers=[?h, ?i]]]
+relcl -> relcl adjc
+	[h=[cat='relcl', ctype='s', dets='no', head=?e, int='no', mod=?g, nr=?l, pers=[?j, ?k], stype=?h, vft='fin', vtype=?i], h1=[cat='relcl', ctype='s', dets='no', head=?e, int='no', mod=?g, nr=?l, pers=[?j, ?k], stype=?h, vft='fin', vtype=?i], h2=[cat='adjc', link=?e]]
+relcl -> svo
+	[h=[cat='relcl', ctype=?g, dets='no', head=?d, int='no', mod=?e, nr=?k, pers=[?i, ?j], stype=?f, val='dv', vft='fin', voice='pas', vtype=?h], h1=[cat='svo', ctype=?g, dets='no', head=?d, headS=?e, int='no', nr=?k, pers=[?i, ?j], stype=?f, val='dv', vft='fin', voice='pas', vtype=?h]]
+svo -> sv obj pobj
+	[h=[cat='svo', ctype='s', dets=?p, head=?f, headC1=?i, headC2=?k, headS=?h, int=?o, nr=?s, pers=[?q, ?r], stype=?m, val='dv', vft='fin', voice='pas', vtype=?n], h1=[cat='sv', dets=?p, head=?f, headC1=?i, headC2=?k, headS=?h, int=?o, nr=?s, pers=[?q, ?r], stype=?m, val='dv', vft='fin', voice='pas', vtype=?n], h2=[cat='obj', head=?i], h3=[cat='pobj', comp=?k, link=?f]]
+obj -> relpro
+	[h=[case=['a', 'ng'], cat='obj', ctype='s', head=?d], h1=[case=['a', 'ng'], cat='relpro', head=?d]]
+sv -> av4 verb
+	[h=[aux='be', case=[?o, ?p], cat='sv', dets=?n, head=?e, headC1=?i, headC2=?j, headS=?g, hum='no', int=?m, neg=?q, nr=?u, pers=[?s, ?t], pf=?v, pg=?w, stype=?k, tense=?r, val='dv', vft='fin', voice='pas', vtype=?l], h1=[aux='be', case=[?o, ?p], cat='av4', dets=?n, head=?e, headS=?g, hum='no', int=?m, neg=?q, nr=?u, pers=[?s, ?t], pf=?v, pg=?w, stype=?k, tense=?r, vft='fin', vtype='aux'], h2=[cat='verb', head=?e, headC1=?g, headC2=?i, headS=?j, val='dv', vft='nf', voice='pas', vtype=?l]]
+av4 -> av3 aux
+	[h=[aux='be', case=[?m, ?n], cat='av4', dets=?l, head=?f, headS=?e, hum=?o, int=?k, neg=?p, nr=?t, pers=[?r, ?s], pf=?u, pg='y', stype=?h, tense=?q, vft='fin', vtype=?i], h1=[aux='be', case=[?m, ?n], cat='av3', dets=?l, head=?f, headS=?e, hum=?o, int=?k, neg=?p, nr=?t, pers=[?r, ?s], pf=?u, pg='no', stype=?h, tense=?q, vft='fin', vtype=?i], h2=[aux='be', cat='aux', head=?f, pg='y', vft='nf', vtype=?i]]
+av3 -> av2 aux
+	[h=[aux='be', case=[?m, ?n], cat='av3', dets=?l, head=?f, headS=?e, hum=?o, int=?k, neg=?p, nr=?t, pers=[?r, ?s], pf='y', pg=?u, stype=?h, tense=?q, vft='fin', vtype=?i], h1=[aux='have', case=[?m, ?n], cat='av2', dets=?l, head=?f, headS=?e, hum=?o, int=?k, neg=?p, nr=?t, pers=[?r, ?s], pf='no', pg=?u, stype=?h, tense=?q, vft='fin', vtype=?i], h2=[aux='be', cat='aux', head=?f, pf='y', vft='nf', vtype=?i]]
+av2 -> av1 aux
+	[h=[aux=?p, case=[?m, ?n], cat='av2', dets=?l, head=?f, headS=?e, hum=?o, int=?k, neg=?q, nr=?t, pers=[?r, ?s], pf=?u, pg=?v, stype=?h, tense='mod', vft='fin', vtype=?i], h1=[aux='mod', case=[?m, ?n], cat='av1', dets=?l, head=?f, headS=?e, hum=?o, int=?k, neg=?q, nr=?t, pers=[?r, ?s], pf=?u, pg=?v, stype=?h, tense='mod', vft='fin', vtype=?i], h2=[aux=?p, cat='aux', head=?f, vft='nf', vtype=?i]]
+av1 -> av0 aux
+	[h=[aux=?p, case=[?m, ?n], cat='av1', dets=?l, head=?f, headS=?e, hum=?o, int=?k, neg='y', nr=?t, pers=[?r, ?s], pf=?u, pg=?v, stype=?h, tense=?q, vft='fin', vtype=?i], h1=[aux=?p, case=[?m, ?n], cat='av0', dets=?l, head=?f, headS=?e, hum=?o, int=?k, neg='no', nr=?t, pers=[?r, ?s], pf=?u, pg=?v, stype=?h, tense=?q, vft='fin', vtype=?i], h2=[aux='not', cat='aux', head=?f, neg='y', vtype=?i]]
+av0 -> relpro aux
+	[h=[aux=?j, case=['n', 'ng'], cat='av0', dets='no', head=?f, headS=?e, hum=?i, int=?h, neg=?k, nr=?q, pers=[?m, ?n], pf=?s, pg=?t, stype='s', tense=?l, vft='fin', vtype=?g], h1=[case=['n', 'ng'], cat='relpro', dets='no', head=?e, hum=?i, int=?h, nr=?q, pers=[?m, ?n]], h2=[aux=?j, cat='aux', head=?f, neg=?k, nr=?q, pers=[?m, ?n], pf=?s, pg=?t, tense=?l, vft='fin', vtype=?g]]
+av0 -> aux sbj
+	[h=[aux=?l, case=[?i, ?j], cat='av0', dets='y', head=?f, headS=?e, hum=?k, int='y', neg=?m, nr=?s, pers=[?o, ?p], pf=?u, pg=?v, stype=?g, tense=?n, vft='fin', vtype=?h], h1=[aux=?l, cat='aux', head=?f, neg=?m, nr=?s, pers=[?o, ?p], pf=?u, pg=?v, tense=?n, vft='fin', vtype=?h], h2=[case=[?i, ?j], cat='sbj', dets='y', head=?e, hum=?k, nr=?s, pers=[?o, ?p], stype=?g]]
+sbj -> n
+	[h=[case=['n', 'ng'], cat='sbj', dets='y', head=?d, hum=?h, nr=?g, pers=[?e, ?f], stype='s'], h1=[case=['n', 'ng'], cat='n', head=?d, hum=?h, nr=?g, pers=[?e, ?f]]]
+n -> n pc
+	[h=[case=[?k, ?l], cat='n', count=?o, det=?g, gen=?n, head=?e, hum=?m, modr='y', nr=?j, pers=[?h, ?i]], h1=[case=[?k, ?l], cat='n', count=?o, det=?g, gen=?n, head=?e, hum=?m, modr='no', nr=?j, pers=[?h, ?i]], h2=[case=[?anon1, ?anon2], cat='pc', link=?e]]
+n -> d n
+	[h=[case=[?k, ?l], cat='n', count=?o, det='no', gen=?n, head=?e, hum=?m, modr=?g, nr=?j, pers=[?h, ?i]], h1=[cat='d', mod=?e], h2=[case=[?k, ?l], cat='n', count=?o, det='no', gen=?n, head=?e, hum=?m, modr=?g, nr=?j, pers=[?h, ?i]]]
+n -> pn
+	[h=[case=[?j, ?k], cat='n', det=?f, gen=?m, head=?d, hum=?l, modr=?e, nr=?i, pers=[?g, ?h]], h1=[case=[?j, ?k], cat='pn', det=?f, gen=?m, head=?d, hum=?l, modr=?e, nr=?i, pers=[?g, ?h]]]
+n -> det n
+	[h=[case=[?k, ?l], cat='n', count=?o, det='y', gen=?n, head=?e, hum=?m, modr=?g, nr=?j, pers=[?h, ?i]], h1=[cat='det', mod=?e, nr=?j], h2=[case=[?k, ?l], cat='n', count=?o, det='no', gen=?n, head=?e, hum=?m, modr=?g, nr=?j, pers=[?h, ?i]]]
+n -> nc
+	[h=[case=[?j, ?k], cat='n', count=?n, det=?f, gen=?m, head=?d, hum=?l, modr=?e, nr=?i, pers=[?g, ?h]], h1=[case=[?j, ?k], cat='nc', count=?n, det=?f, gen=?m, head=?d, hum=?l, modr=?e, nr=?i, pers=[?g, ?h]]]
+nc -> na nc
+	[h=[case=[?l, ?m], cat='nc', count=?p, det=?h, gen=?o, head=?e, hum=?n, modr=?g, nr=?k, pers=[?i, ?j]], h1=[cat='na', mod=?e, nr='sg'], h2=[case=[?l, ?m], cat='nc', count=?p, det=?h, gen=?o, head=?e, hum=?n, modr=?g, nr=?k, pers=[?i, ?j]]]
+nc -> noun
+	[h=[case=[?i, ?j], cat='nc', count=?m, det='no', gen=?l, head=?d, hum=?k, modr=?e, nr=?h, pers=[?f, ?g]], h1=[case=[?i, ?j], cat='noun', count=?m, det='no', gen=?l, head=?d, hum=?k, modr=?e, nr=?h, pers=[?f, ?g]]]
+na -> na na
+	[h=[cat='na', head=?e, mod=?g, nr='sg'], h1=[cat='na', mod=?e, nr='sg'], h2=[cat='na', head=?e, mod=?g, nr='sg']]
+na -> noun
+	[h=[cat='na', head=?d, mod=?e, nr='sg'], h1=[cat='noun', head=?d, mod=?e, nr='sg']]
+a -> adv a
+	[h=[cat='a', head=?e, mod=?g], h1=[cat='adv', head=?e], h2=[cat='a', head=?e, mod=?g]]
+a -> adj
+	[h=[cat='a', head=?d, mod=?e], h1=[cat='adj', head=?d, mod=?e]]
+d -> det d
+	[h=[case=[?h, 'g'], cat='d', det='y', head=?e, mod=?f], h1=[cat='det', mod=?f, nr=?x1], h2=[case=[?h, 'g'], cat='d', det='no', head=?e, mod=?f]]
+d -> n iprep
+	[h=[case=[?h, 'g'], cat='d', det=?i, head=?e, mod=?g], h1=[case=[?anon1, 'ng'], cat='n', det=?i, head=?e], h2=[case=[?h, 'g'], cat='iprep', head=?e, mod=?g]]
+d -> apro
+	[h=[case=[?g, 'g'], cat='d', det=?f, head=?d, mod=?e], h1=[case=[?g, 'g'], cat='apro', det=?f, head=?d, mod=?e]]
+sbj -> relpro
+	[h=[case=['n', 'ng'], cat='sbj', dets='no', head=?d, hum=?h, nr=?g, pers=[?e, ?f], stype='s'], h1=[case=['n', 'ng'], cat='relpro', dets='no', head=?d, hum=?h, nr=?g, pers=[?e, ?f]]]
+av0 -> sbj aux
+	[h=[aux=?l, case=[?i, ?j], cat='av0', dets='y', head=?f, headS=?e, hum=?k, int='no', neg=?m, nr=?s, pers=[?o, ?p], pf=?u, pg=?v, stype=?g, tense=?n, vft='fin', vtype=?h], h1=[case=[?i, ?j], cat='sbj', dets='y', head=?e, hum=?k, nr=?s, pers=[?o, ?p], stype=?g], h2=[aux=?l, cat='aux', head=?f, neg=?m, nr=?s, pers=[?o, ?p], pf=?u, pg=?v, tense=?n, vft='fin', vtype=?h]]
+av1 -> av0
+	[h=[aux=?n, case=[?k, ?l], cat='av1', dets=?j, head=?e, headS=?d, hum=?m, int=?i, neg=?o, nr=?s, pers=[?q, ?r], pf=?t, pg=?u, stype=?f, tense=?p, vft=?h, vtype=?g], h1=[aux=?n, case=[?k, ?l], cat='av0', dets=?j, head=?e, headS=?d, hum=?m, int=?i, neg=?o, nr=?s, pers=[?q, ?r], pf=?t, pg=?u, stype=?f, tense=?p, vft=?h, vtype=?g]]
+av2 -> av1
+	[h=[aux=?n, case=[?k, ?l], cat='av2', dets=?j, head=?e, headS=?d, hum=?m, int=?i, neg=?o, nr=?s, pers=[?q, ?r], pf=?t, pg=?u, stype=?f, tense=?p, vft=?h, vtype=?g], h1=[aux=?n, case=[?k, ?l], cat='av1', dets=?j, head=?e, headS=?d, hum=?m, int=?i, neg=?o, nr=?s, pers=[?q, ?r], pf=?t, pg=?u, stype=?f, tense=?p, vft=?h, vtype=?g]]
+av3 -> av2
+	[h=[aux=?n, case=[?k, ?l], cat='av3', dets=?j, head=?e, headS=?d, hum=?m, int=?i, neg=?o, nr=?s, pers=[?q, ?r], pf=?t, pg=?u, stype=?f, tense=?p, vft=?h, vtype=?g], h1=[aux=?n, case=[?k, ?l], cat='av2', dets=?j, head=?e, headS=?d, hum=?m, int=?i, neg=?o, nr=?s, pers=[?q, ?r], pf=?t, pg=?u, stype=?f, tense=?p, vft=?h, vtype=?g]]
+av4 -> av3
+	[h=[aux=?n, case=[?k, ?l], cat='av4', dets=?j, head=?e, headS=?d, hum=?m, int=?i, neg=?o, nr=?s, pers=[?q, ?r], pf=?t, pg=?u, stype=?f, tense=?p, vft=?h, vtype=?g], h1=[aux=?n, case=[?k, ?l], cat='av3', dets=?j, head=?e, headS=?d, hum=?m, int=?i, neg=?o, nr=?s, pers=[?q, ?r], pf=?t, pg=?u, stype=?f, tense=?p, vft=?h, vtype=?g]]
+sv -> av4 verb
+	[h=[aux='be', case=[?o, ?p], cat='sv', dets=?n, head=?e, headC1=?i, headC2=?j, headS=?g, hum='y', int=?m, neg=?q, nr=?u, pers=[?s, ?t], pf=?v, pg=?w, stype=?k, tense=?r, val='dv', vft='fin', voice='pas', vtype=?l], h1=[aux='be', case=[?o, ?p], cat='av4', dets=?n, head=?e, headS=?g, hum='y', int=?m, neg=?q, nr=?u, pers=[?s, ?t], pf=?v, pg=?w, stype=?k, tense=?r, vft='fin', vtype='aux'], h2=[cat='verb', head=?e, headC1=?i, headC2=?g, headS=?j, val='dv', vft='nf', voice='pas', vtype=?l]]
+sv -> av3 verb
+	[h=[aux='be', case=[?p, ?q], cat='sv', dets=?o, head=?e, headC1=?i, headC2=?j, headS=?g, hum=?r, int=?n, neg=?s, nr=?w, pers=[?u, ?v], pf=?x, pg='y', stype=?k, tense=?t, val='dv', vf='ing', vft='fin', voice=?m, vtype=?l], h1=[aux='be', case=[?p, ?q], cat='av3', dets=?o, head=?e, headS=?g, hum=?r, int=?n, neg=?s, nr=?w, pers=[?u, ?v], pf=?x, pg='no', stype=?k, tense=?t, vft='fin', vtype='aux'], h2=[cat='verb', head=?e, headC1=?i, headC2=?j, headS=?g, pg='y', val='dv', vf='ing', vft='nf', voice=?m, vtype=?l]]
+sv -> av2 verb
+	[h=[aux='have', case=[?p, ?q], cat='sv', dets=?o, head=?e, headC1=?i, headC2=?j, headS=?g, hum=?r, int=?n, neg=?s, nr=?w, pers=[?u, ?v], pf='y', pg=?x, stype=?k, tense=?t, val='dv', vf='ed', vft='fin', voice=?m, vtype=?l], h1=[aux='have', case=[?p, ?q], cat='av2', dets=?o, head=?e, headS=?g, hum=?r, int=?n, neg=?s, nr=?w, pers=[?u, ?v], pf='no', pg=?x, stype=?k, tense=?t, vft='fin', vtype='aux'], h2=[cat='verb', head=?e, headC1=?i, headC2=?j, headS=?g, pf='y', val='dv', vf='ed', vft='nf', voice=?m, vtype=?l]]
+sv -> av1 verb
+	[h=[aux='do', case=[?p, ?q], cat='sv', dets=?o, head=?e, headC1=?i, headC2=?j, headS=?g, hum=?r, int=?n, neg=?s, nr=?w, pers=[?u, ?v], pf=?x, pg=?y, stype=?k, tense=?t, val='dv', vf='bse', vft='fin', voice=?m, vtype=?l], h1=[aux='do', case=[?p, ?q], cat='av1', dets=?o, head=?e, headS=?g, hum=?r, int=?n, neg=?s, nr=?w, pers=[?u, ?v], pf=?x, pg=?y, stype=?k, tense=?t, vft='fin', vtype='aux'], h2=[aux='no', cat='verb', head=?e, headC1=?i, headC2=?j, headS=?g, val='dv', vf='bse', vft='nf', voice=?m, vtype=?l]]
+sv -> av1 verb
+	[h=[aux='mod', case=[?p, ?q], cat='sv', dets=?o, head=?e, headC1=?i, headC2=?j, headS=?g, hum=?r, int=?n, neg=?s, nr=?w, pers=[?u, ?v], pf=?x, pg=?y, stype=?k, tense=?t, val='dv', vf='bse', vft='fin', voice=?m, vtype=?l], h1=[aux='mod', case=[?p, ?q], cat='av1', dets=?o, head=?e, headS=?g, hum=?r, int=?n, neg=?s, nr=?w, pers=[?u, ?v], pf=?x, pg=?y, stype=?k, tense=?t, vft='fin', vtype='aux'], h2=[aux='no', cat='verb', head=?e, headC1=?i, headC2=?j, headS=?g, val='dv', vf='bse', vft='nf', voice=?m, vtype=?l]]
+sv -> relpro verb
+	[h=[aux='no', case=[?m, ?n], cat='sv', dets='no', head=?e, headC1=?h, headC2=?i, headS=?f, hum=?o, int=?l, neg=?p, nr=?v, pers=[?r, ?s], pf=?x, pg=?y, stype='s', tense=?q, val='dv', vf='no', vft='fin', voice=?k, vtype=?j], h1=[case=[?m, ?n], cat='relpro', dets='no', head=?f, hum=?o, int=?l, nr=?v, pers=[?r, ?s]], h2=[aux='no', cat='verb', head=?e, headC1=?h, headC2=?i, headS=?f, neg=?p, nr=?v, pers=[?r, ?s], pf=?x, pg=?y, tense=?q, val='dv', vf='no', vft='fin', voice=?k, vtype=?j]]
+sv -> sbj verb
+	[h=[aux='no', case=[?m, ?n], cat='sv', dets='y', head=?e, headC1=?h, headC2=?i, headS=?f, hum=?o, int='no', neg=?p, nr=?v, pers=[?r, ?s], pf=?x, pg=?y, stype=?j, tense=?q, val='dv', vf='no', vft='fin', voice=?l, vtype=?k], h1=[case=[?m, ?n], cat='sbj', dets='y', head=?f, hum=?o, nr=?v, pers=[?r, ?s], stype=?j], h2=[aux='no', cat='verb', head=?e, headC1=?h, headC2=?i, headS=?f, neg=?p, nr=?v, pers=[?r, ?s], pf=?x, pg=?y, tense=?q, val='dv', vf='no', vft='fin', voice=?l, vtype=?k]]
+sv -> av4 verb
+	[h=[aux='be', case=[?n, ?o], cat='sv', dets=?m, head=?e, headC=?i, headS=?g, hum=?p, int=?l, neg=?q, nr=?u, pers=[?s, ?t], pf=?v, pg=?w, stype=?j, tense=?r, val='tv', vft='fin', voice='pas', vtype=?k], h1=[aux='be', case=[?n, ?o], cat='av4', dets=?m, head=?e, headS=?g, hum=?p, int=?l, neg=?q, nr=?u, pers=[?s, ?t], pf=?v, pg=?w, stype=?j, tense=?r, vft='fin', vtype='aux'], h2=[cat='verb', head=?e, headC=?i, headS=?g, val='tv', vft='nf', voice='pas', vtype=?k]]
+sv -> av3 verb
+	[h=[aux='be', case=[?o, ?p], cat='sv', dets=?n, head=?e, headC=?i, headS=?g, hum=?q, int=?m, neg=?r, nr=?v, pers=[?t, ?u], pf=?w, pg='y', stype=?j, tense=?s, val='tv', vf='ing', vft='fin', voice=?l, vtype=?k], h1=[aux='be', case=[?o, ?p], cat='av3', dets=?n, head=?e, headS=?g, hum=?q, int=?m, neg=?r, nr=?v, pers=[?t, ?u], pf=?w, pg='no', stype=?j, tense=?s, vft='fin', vtype='aux'], h2=[cat='verb', head=?e, headC=?i, headS=?g, pg='y', val='tv', vf='ing', vft='nf', voice=?l, vtype=?k]]
+sv -> av2 verb
+	[h=[aux='have', case=[?o, ?p], cat='sv', dets=?n, head=?e, headC=?i, headS=?g, hum=?q, int=?m, neg=?r, nr=?v, pers=[?t, ?u], pf='y', pg=?w, stype=?j, tense=?s, val='tv', vf='ed', vft='fin', voice=?l, vtype=?k], h1=[aux='have', case=[?o, ?p], cat='av2', dets=?n, head=?e, headS=?g, hum=?q, int=?m, neg=?r, nr=?v, pers=[?t, ?u], pf='no', pg=?w, stype=?j, tense=?s, vft='fin', vtype='aux'], h2=[cat='verb', head=?e, headC=?i, headS=?g, pf='y', val='tv', vf='ed', vft='nf', voice=?l, vtype=?k]]
+sv -> av1 verb
+	[h=[aux='do', case=[?o, ?p], cat='sv', dets=?n, head=?e, headC=?i, headS=?g, hum=?q, int=?m, neg=?r, nr=?v, pers=[?t, ?u], pf=?w, pg=?x, stype=?j, tense=?s, val='tv', vf='bse', vft='fin', voice=?l, vtype=?k], h1=[aux='do', case=[?o, ?p], cat='av1', dets=?n, head=?e, headS=?g, hum=?q, int=?m, neg=?r, nr=?v, pers=[?t, ?u], pf=?w, pg=?x, stype=?j, tense=?s, vft='fin', vtype='aux'], h2=[aux='no', cat='verb', head=?e, headC=?i, headS=?g, val='tv', vf='bse', vft='nf', voice=?l, vtype=?k]]
+sv -> av1 verb
+	[h=[aux='mod', case=[?o, ?p], cat='sv', dets=?n, head=?e, headC=?i, headS=?g, hum=?q, int=?m, neg=?r, nr=?v, pers=[?t, ?u], pf=?w, pg=?x, stype=?j, tense=?s, val='tv', vf='bse', vft='fin', voice=?l, vtype=?k], h1=[aux='mod', case=[?o, ?p], cat='av1', dets=?n, head=?e, headS=?g, hum=?q, int=?m, neg=?r, nr=?v, pers=[?t, ?u], pf=?w, pg=?x, stype=?j, tense=?s, vft='fin', vtype='aux'], h2=[aux='no', cat='verb', head=?e, headC=?i, headS=?g, val='tv', vf='bse', vft='nf', voice=?l, vtype=?k]]
+sv -> relpro verb
+	[h=[aux='no', case=[?l, ?m], cat='sv', dets='no', head=?e, headC=?h, headS=?f, hum=?n, int=?k, neg=?o, nr=?u, pers=[?q, ?r], pf=?w, pg=?x, stype='s', tense=?p, val='tv', vf='no', vft='fin', voice=?j, vtype=?i], h1=[case=[?l, ?m], cat='relpro', dets='no', head=?f, hum=?n, int=?k, nr=?u, pers=[?q, ?r]], h2=[aux='no', cat='verb', head=?e, headC=?h, headS=?f, neg=?o, nr=?u, pers=[?q, ?r], pf=?w, pg=?x, tense=?p, val='tv', vf='no', vft='fin', voice=?j, vtype=?i]]
+sv -> sbj verb
+	[h=[aux='no', case=[?l, ?m], cat='sv', dets='y', head=?e, headC=?h, headS=?f, hum=?n, int='no', neg=?o, nr=?u, pers=[?q, ?r], pf=?w, pg=?x, stype=?i, tense=?p, val='tv', vf='no', vft='fin', voice=?k, vtype=?j], h1=[case=[?l, ?m], cat='sbj', dets='y', head=?f, hum=?n, nr=?u, pers=[?q, ?r], stype=?i], h2=[aux='no', cat='verb', head=?e, headC=?h, headS=?f, neg=?o, nr=?u, pers=[?q, ?r], pf=?w, pg=?x, tense=?p, val='tv', vf='no', vft='fin', voice=?k, vtype=?j]]
+sv -> av3 verb
+	[h=[aux='be', case=[?n, ?o], cat='sv', dets=?m, head=?e, headS=?g, hum=?p, int=?l, neg=?q, nr=?u, pers=[?s, ?t], pf=?v, pg='y', stype=?i, tense=?r, val='iv', vf='ing', vft='fin', voice=?k, vtype=?j], h1=[aux='be', case=[?n, ?o], cat='av3', dets=?m, head=?e, headS=?g, hum=?p, int=?l, neg=?q, nr=?u, pers=[?s, ?t], pf=?v, pg='no', stype=?i, tense=?r, vft='fin', vtype='aux'], h2=[cat='verb', head=?e, headS=?g, pg='y', val='iv', vf='ing', vft='nf', voice=?k, vtype=?j]]
+sv -> av2 verb
+	[h=[aux='have', case=[?n, ?o], cat='sv', dets=?m, head=?e, headS=?g, hum=?p, int=?l, neg=?q, nr=?u, pers=[?s, ?t], pf='y', pg=?v, stype=?i, tense=?r, val='iv', vf='ed', vft='fin', voice=?k, vtype=?j], h1=[aux='have', case=[?n, ?o], cat='av2', dets=?m, head=?e, headS=?g, hum=?p, int=?l, neg=?q, nr=?u, pers=[?s, ?t], pf='no', pg=?v, stype=?i, tense=?r, vft='fin', vtype='aux'], h2=[cat='verb', head=?e, headS=?g, pf='y', val='iv', vf='ed', vft='nf', voice=?k, vtype=?j]]
+sv -> av1 verb
+	[h=[aux='do', case=[?n, ?o], cat='sv', dets=?m, head=?e, headS=?g, hum=?p, int=?l, neg=?q, nr=?u, pers=[?s, ?t], pf=?v, pg=?w, stype=?i, tense=?r, val='iv', vf='bse', vft='fin', voice=?k, vtype=?j], h1=[aux='do', case=[?n, ?o], cat='av1', dets=?m, head=?e, headS=?g, hum=?p, int=?l, neg=?q, nr=?u, pers=[?s, ?t], pf=?v, pg=?w, stype=?i, tense=?r, vft='fin', vtype='aux'], h2=[aux='no', cat='verb', head=?e, headS=?g, val='iv', vf='bse', vft='nf', voice=?k, vtype=?j]]
+sv -> av1 verb
+	[h=[aux='mod', case=[?n, ?o], cat='sv', dets=?m, head=?e, headS=?g, hum=?p, int=?l, neg=?q, nr=?u, pers=[?s, ?t], pf=?v, pg=?w, stype=?i, tense=?r, val='iv', vf='bse', vft='fin', voice=?k, vtype=?j], h1=[aux='mod', case=[?n, ?o], cat='av1', dets=?m, head=?e, headS=?g, hum=?p, int=?l, neg=?q, nr=?u, pers=[?s, ?t], pf=?v, pg=?w, stype=?i, tense=?r, vft='fin', vtype='aux'], h2=[aux='no', cat='verb', head=?e, headS=?g, val='iv', vf='bse', vft='nf', voice=?k, vtype=?j]]
+sv -> relpro verb
+	[h=[aux='no', case=[?k, ?l], cat='sv', dets='no', head=?e, headS=?f, hum=?m, int=?j, neg=?n, nr=?t, pers=[?p, ?q], pf=?v, pg=?w, stype='s', tense=?o, val='iv', vf='no', vft='fin', voice=?i, vtype=?h], h1=[case=[?k, ?l], cat='relpro', dets='no', head=?f, hum=?m, int=?j, nr=?t, pers=[?p, ?q]], h2=[aux='no', cat='verb', head=?e, headS=?f, neg=?n, nr=?t, pers=[?p, ?q], pf=?v, pg=?w, tense=?o, val='iv', vf='no', vft='fin', voice=?i, vtype=?h]]
+sv -> sbj verb
+	[h=[aux='no', case=[?k, ?l], cat='sv', dets='y', head=?e, headS=?f, hum=?m, int='no', neg=?n, nr=?t, pers=[?p, ?q], pf=?v, pg=?w, stype=?h, tense=?o, val='iv', vf='no', vft='fin', voice=?j, vtype=?i], h1=[case=[?k, ?l], cat='sbj', dets='y', head=?f, hum=?m, nr=?t, pers=[?p, ?q], stype=?h], h2=[aux='no', cat='verb', head=?e, headS=?f, neg=?n, nr=?t, pers=[?p, ?q], pf=?v, pg=?w, tense=?o, val='iv', vf='no', vft='fin', voice=?j, vtype=?i]]
+svo -> sv obj obj
+	[h=[cat='svo', ctype='s', dets=?p, head=?f, headC1=?h, headC2=?j, headS=?g, int=?o, nr=?s, pers=[?q, ?r], stype=?l, val='dv', vf=?n, vft='fin', voice='act', vtype=?m], h1=[cat='sv', dets=?p, head=?f, headC1=?j, headC2=?h, headS=?g, int=?o, nr=?s, pers=[?q, ?r], stype=?l, val='dv', vf=?n, vft='fin', voice='act', vtype=?m], h2=[cat='obj', head=?h], h3=[cat='obj', head=?j]]
+svo -> sv obj pobj
+	[h=[cat='svo', ctype='s', dets=?q, head=?f, headC1=?i, headC2=?k, headS=?h, int=?p, nr=?t, pers=[?r, ?s], stype=?m, val='dv', vf=?o, vft='fin', voice='act', vtype=?n], h1=[cat='sv', dets=?q, head=?f, headC1=?i, headC2=?k, headS=?h, int=?p, nr=?t, pers=[?r, ?s], stype=?m, val='dv', vf=?o, vft='fin', voice='act', vtype=?n], h2=[cat='obj', head=?i], h3=[cat='pobj', comp=?k, link=?f]]
+svo -> sv pobj
+	[h=[cat='svo', ctype='s', dets=?m, head=?e, headC=?h, headS=?g, int=?l, nr=?p, pers=[?n, ?o], stype=?j, val='tv', vft='fin', voice='pas', vtype=?k], h1=[cat='sv', dets=?m, head=?e, headC=?h, headS=?g, int=?l, nr=?p, pers=[?n, ?o], stype=?j, val='tv', vft='fin', voice='pas', vtype=?k], h2=[cat='pobj', comp=?h, link=?e]]
+svo -> sv obj
+	[h=[cat='svo', ctype='s', dets=?m, head=?e, headC=?g, headS=?f, int=?l, nr=?p, pers=[?n, ?o], stype=?i, val='tv', vf=?k, vft='fin', voice='act', vtype=?j], h1=[cat='sv', dets=?m, head=?e, headC=?g, headS=?f, int=?l, nr=?p, pers=[?n, ?o], stype=?i, val='tv', vf=?k, vft='fin', voice='act', vtype=?j], h2=[cat='obj', head=?g]]
+svo -> sv
+	[h=[cat='svo', ctype='s', dets=?j, head=?d, headS=?e, int=?i, nr=?m, pers=[?k, ?l], stype=?f, val='iv', vf=?h, vft='fin', voice='act', vtype=?g], h1=[cat='sv', dets=?j, head=?d, headS=?e, int=?i, nr=?m, pers=[?k, ?l], stype=?f, val='iv', vf=?h, vft='fin', voice='act', vtype=?g]]
+relcl -> pobj sv pobj
+	[h=[cat='relcl', ctype='s', dets='no', head=?f, int='no', mod=?i, nr=?p, pers=[?n, ?o], stype=?l, val='dv', vft='fin', voice='pas', vtype=?m], h1=[cat='pobj', comp=?i, link=?f], h2=[cat='sv', dets='y', head=?f, headC1=?i, headC2=?k, int='no', nr=?p, pers=[?n, ?o], stype=?l, val='dv', vft='fin', voice='pas', vtype=?m], h3=[cat='pobj', comp=?k, link=?f]]
+relcl -> pobj sv obj
+	[h=[cat='relcl', ctype='s', dets='no', head=?f, int='no', mod=?h, nr=?p, pers=[?n, ?o], stype=?k, val='dv', vf=?m, vft='fin', voice='act', vtype=?l], h1=[cat='pobj', comp=?h, link=?f], h2=[cat='sv', dets='y', head=?f, headC1=?j, headC2=?h, int='no', nr=?p, pers=[?n, ?o], stype=?k, val='dv', vf=?m, vft='fin', voice='act', vtype=?l], h3=[case=['a', 'ng'], cat='obj', ctype='s', head=?j]]
+relcl -> relpro sv pobj
+	[h=[cat='relcl', ctype='s', dets='no', head=?f, int='no', mod=?h, nr=?p, pers=[?n, ?o], stype=?k, val='dv', vf=?m, vft='fin', voice='act', vtype=?l], h1=[case=[?anon4, 'ng'], cat='relpro', dets='no', head=?h, hum=?x5, int=?x1, nr=?x3, pers=[?anon2, 3]], h2=[cat='sv', dets='y', head=?f, headC1=?h, headC2=?j, int='no', nr=?p, pers=[?n, ?o], stype=?k, val='dv', vf=?m, vft='fin', voice='act', vtype=?l], h3=[cat='pobj', comp=?j, link=?f]]
+relcl -> relpro sv
+	[h=[cat='relcl', ctype='s', dets='no', head=?e, int='no', mod=?f, nr=?m, pers=[?k, ?l], stype=?h, val='tv', vf=?j, vft='fin', voice='act', vtype=?i], h1=[case=['a', 'ng'], cat='relpro', dets='no', head=?f, hum='y', int=?x1, nr=?x3, pers=[?anon2, 3]], h2=[cat='sv', dets='y', head=?e, headC=?f, int='no', nr=?m, pers=[?k, ?l], stype=?h, val='tv', vf=?j, vft='fin', voice='act', vtype=?i]]
+relcl -> fcl
+	[h=[cat='relcl', ctype=?g, dets='no', head=?d, int='no', mod=?e, nr=?k, pers=[?i, ?j], stype=?f, val='tv', vft='fin', voice='pas', vtype=?h], h1=[cat='fcl', ctype=?g, dets='no', head=?d, headS=?e, int='no', nr=?k, pers=[?i, ?j], stype=?f, val='tv', vft='fin', voice='pas', vtype=?h]]
+fcl -> sv obj tocl
+	[h=[cat='fcl', ctype='c', dets=?r, head=?f, headC1=?i, headC2=?k, headS=?g, int=?s, nr=?q, pers=[?o, ?p], stype=?m, val='dv', vft='fin', voice=?n, vtype='csbj'], h1=[cat='sv', dets=?r, head=?f, headC1=?i, headC2=?k, headS=?g, int=?s, nr=?q, pers=[?o, ?p], stype=?m, val='dv', vft='fin', voice=?n, vtype='csbj'], h2=[cat='obj', head=?i], h3=[cat='tocl', head=?k, headS=?g]]
+tocl -> ncl
+	[h=[cat='tocl', ctype=?g, head=?d, headS=?e, stype=?f, vf='to', vft='nfin', voice=?h], h1=[cat='ncl', ctype=?g, head=?d, headS=?e, stype=?f, vf='to', vft='nfin', voice=?h]]
+ncl -> nv obj tocl
+	[h=[cat='ncl', ctype='c', head=?f, headC1=?i, headC2=?k, headS=?g, stype='no', val='dv', vf=?m, vft='nfin', voice=?n, vtype='csbj'], h1=[cat='nv', head=?f, headC1=?i, headC2=?k, headS=?g, val='dv', vf=?m, vft='nfin', voice=?n, vtype='csbj'], h2=[cat='obj', head=?i], h3=[cat='tocl', head=?k, headS=?g]]
+tocl -> nvo adjc
+	[h=[cat='tocl', ctype='s', head=?e, headS=?g, stype=?h, val=?j, vf='to', vft='nfin', voice=?k, vtype=?i], h1=[cat='nvo', ctype='s', head=?e, headS=?g, stype=?h, val=?j, vf='to', vft='nfin', voice=?k, vtype=?i], h2=[cat='adjc', link=?e]]
+nvo -> nv pobj pobj
+	[h=[cat='nvo', ctype=?n, head=?f, headC1=?j, headC2=?l, headS=?i, stype='no', val='dv', vf=?q, vft='nfin', voice='pas', vtype=?p], h1=[cat='nv', head=?f, headC1=?i, headC2=?j, headS=?l, val='dv', vf=?q, vft='nfin', voice='pas', vtype=?p], h2=[cat='pobj', comp=?j, ctype=?n, link=?f], h3=[cat='pobj', comp=?l, ctype=?n, link=?f]]
+nv -> aux nv
+	[h=[aux=?l, cat='nv', head=?e, headC1=?h, headC2=?i, headS=?g, neg='y', pf=?m, pg=?n, val='dv', vf=?k, vft='nfin', voice=?o, vtype=?j], h1=[aux='not', cat='aux', head=?e, neg='y', vtype='aux'], h2=[aux=?l, cat='nv', head=?e, headC1=?h, headC2=?i, headS=?g, neg='no', pf=?m, pg=?n, val='dv', vf=?k, vft='nfin', voice=?o, vtype=?j]]
+nv -> nav1 verb
+	[h=[aux='be', cat='nv', head=?e, headC1=?h, headC2=?i, headS=?g, neg=?l, pf=?m, pg=?n, val='dv', vf=?k, vft='nfin', voice='pas', vtype=?j], h1=[aux='be', cat='nav1', head=?e, neg=?l, pf=?m, pg=?n, vf=?k, vft='nfin', vtype='aux'], h2=[cat='verb', head=?e, headC1=?h, headC2=?i, headS=?g, val='dv', vft='nf', voice='pas', vtype=?j]]
+nav1 -> nav1 aux
+	[h=[aux='be', cat='nav1', head=?e, neg=?i, pf=?j, pg='y', vf='to', vft='nfin', vtype=?g], h1=[aux='be', cat='nav1', head=?e, neg=?i, pf=?j, pg='no', vf='to', vft='nfin', vtype=?g], h2=[aux='be', cat='aux', head=?e, pg='y', vf='ing', vft='nf', vtype=?g]]
+nav1 -> nav0 aux
+	[h=[aux='be', cat='nav1', head=?e, neg=?j, pf='y', pg=?k, vf=?i, vft='nfin', vtype=?g], h1=[aux='have', cat='nav0', head=?e, neg=?j, pf='no', pg=?k, vf=?i, vft='nfin', vtype=?g], h2=[aux='be', cat='aux', head=?e, pf='y', vf='ed', vft='nf', vtype=?g]]
+nav0 -> aux aux
+	[h=[aux=?i, cat='nav0', head=?e, neg=?j, pf=?k, pg=?l, vf='to', vft='nfin', vtype=?g], h1=[aux='to', cat='aux', head=?e, neg=?j, pf=?k, pg=?l, vf='to', vft='nfin', vtype=?g], h2=[aux=?i, cat='aux', head=?e, vf='bse', vft='nf', vtype=?g]]
+nav0 -> aux
+	[h=[aux=?f, cat='nav0', head=?d, neg=?g, pf=?h, pg=?i, vf='ing', vft='nfin', vtype=?e], h1=[aux=?f, cat='aux', head=?d, neg=?g, pf=?h, pg=?i, vf='ing', vft='nfin', vtype=?e]]
+nav1 -> nav0
+	[h=[aux=?g, cat='nav1', head=?d, neg=?h, pf=?i, pg=?j, vf=?f, vft='nfin', vtype=?e], h1=[aux=?g, cat='nav0', head=?d, neg=?h, pf=?i, pg=?j, vf=?f, vft='nfin', vtype=?e]]
+nv -> nav1 verb
+	[h=[aux='be', cat='nv', head=?e, headC1=?h, headC2=?i, headS=?g, neg=?k, pf=?l, pg='y', val='dv', vf='to', vft='nfin', voice=?m, vtype=?j], h1=[aux='be', cat='nav1', head=?e, neg=?k, pf=?l, pg='no', vf='to', vft='nfin', vtype='aux'], h2=[cat='verb', head=?e, headC1=?h, headC2=?i, headS=?g, pg='y', val='dv', vf='ing', vft='nf', voice=?m, vtype=?j]]
+nv -> nav1 verb
+	[h=[aux='be', cat='nv', head=?e, headC1=?h, headC2=?i, headS=?g, neg=?k, pf='y', pg='y', val='dv', vf='ing', vft='nfin', voice=?l, vtype=?j], h1=[aux='be', cat='nav1', head=?e, neg=?k, pf='y', pg='no', vf='ing', vft='nfin', vtype='aux'], h2=[cat='verb', head=?e, headC1=?h, headC2=?i, headS=?g, pg='y', val='dv', vf='ing', vft='nf', voice=?l, vtype=?j]]
+nv -> nav0 verb
+	[h=[aux='have', cat='nv', head=?e, headC1=?h, headC2=?i, headS=?g, neg=?l, pf='y', pg=?m, val='dv', vf=?k, vft='nfin', voice=?n, vtype=?j], h1=[aux='have', cat='nav0', head=?e, neg=?l, pf='no', pg=?m, vf=?k, vft='nfin', vtype='aux'], h2=[cat='verb', head=?e, headC1=?h, headC2=?i, headS=?g, pf='y', val='dv', vf='ed', vft='nf', voice=?n, vtype=?j]]
+nv -> aux verb
+	[h=[aux='no', cat='nv', head=?e, headC1=?h, headC2=?i, headS=?g, neg=?k, pf=?l, pg=?m, val='dv', vf='to', vft='nfin', voice=?n, vtype=?j], h1=[aux='to', cat='aux', head=?e, neg=?k, pf=?l, pg=?m, vf='to', vft='nfin', vtype='aux'], h2=[aux='no', cat='verb', head=?e, headC1=?h, headC2=?i, headS=?g, val='dv', vf='bse', vft='nf', voice=?n, vtype=?j]]
+nv -> verb
+	[h=[aux='no', cat='nv', head=?d, headC1=?f, headC2=?g, headS=?e, neg=?i, pf=?j, pg=?k, val='dv', vf='ed', vft='nfin', voice='pas', vtype=?h], h1=[aux='no', cat='verb', head=?d, headC1=?f, headC2=?g, headS=?e, neg=?i, pf=?j, pg=?k, val='dv', vf='ed', vft='nfin', voice='pas', vtype=?h]]
+nv -> verb
+	[h=[aux='no', cat='nv', head=?d, headC1=?f, headC2=?g, headS=?e, neg=?j, pf=?k, pg=?l, val='dv', vf=?i, vft='nfin', voice='act', vtype=?h], h1=[aux='no', cat='verb', head=?d, headC1=?f, headC2=?g, headS=?e, neg=?j, pf=?k, pg=?l, val='dv', vf=?i, vft='nfin', voice='act', vtype=?h]]
+nv -> aux nv
+	[h=[aux=?k, cat='nv', head=?e, headC=?h, headS=?g, neg='y', pf=?l, pg=?m, val='tv', vf=?j, vft='nfin', voice=?n, vtype=?i], h1=[aux='not', cat='aux', head=?e, neg='y', vtype='aux'], h2=[aux=?k, cat='nv', head=?e, headC=?h, headS=?g, neg='no', pf=?l, pg=?m, val='tv', vf=?j, vft='nfin', voice=?n, vtype=?i]]
+nv -> nav1 verb
+	[h=[aux='be', cat='nv', head=?e, headC=?h, headS=?g, neg=?k, pf=?l, pg=?m, val='tv', vf=?j, vft='nfin', voice='pas', vtype=?i], h1=[aux='be', cat='nav1', head=?e, neg=?k, pf=?l, pg=?m, vf=?j, vft='nfin', vtype='aux'], h2=[cat='verb', head=?e, headC=?g, headS=?h, val='tv', vft='nf', voice='pas', vtype=?i]]
+nv -> nav1 verb
+	[h=[aux='be', cat='nv', head=?e, headC=?h, headS=?g, neg=?j, pf=?k, pg='y', val='tv', vf='to', vft='nfin', voice=?l, vtype=?i], h1=[aux='be', cat='nav1', head=?e, neg=?j, pf=?k, pg='no', vf='to', vft='nfin', vtype='aux'], h2=[cat='verb', head=?e, headC=?h, headS=?g, pg='y', val='tv', vf='ing', vft='nf', voice=?l, vtype=?i]]
+nv -> nav1 verb
+	[h=[aux='be', cat='nv', head=?e, headC=?h, headS=?g, neg=?j, pf='y', pg='y', val='tv', vf='ing', vft='nfin', voice=?k, vtype=?i], h1=[aux='be', cat='nav1', head=?e, neg=?j, pf='y', pg='no', vf='ing', vft='nfin', vtype='aux'], h2=[cat='verb', head=?e, headC=?h, headS=?g, pg='y', val='tv', vf='ing', vft='nf', voice=?k, vtype=?i]]
+nv -> nav0 verb
+	[h=[aux='have', cat='nv', head=?e, headC=?h, headS=?g, neg=?k, pf='y', pg=?l, val='tv', vf=?j, vft='nfin', voice=?m, vtype=?i], h1=[aux='have', cat='nav0', head=?e, neg=?k, pf='no', pg=?l, vf=?j, vft='nfin', vtype='aux'], h2=[cat='verb', head=?e, headC=?h, headS=?g, pf='y', val='tv', vf='ed', vft='nf', voice=?m, vtype=?i]]
+nv -> aux verb
+	[h=[aux='no', cat='nv', head=?e, headC=?h, headS=?g, neg=?j, pf=?k, pg=?l, val='tv', vf='to', vft='nfin', voice=?m, vtype=?i], h1=[aux='to', cat='aux', head=?e, neg=?j, pf=?k, pg=?l, vf='to', vft='nfin', vtype='aux'], h2=[aux='no', cat='verb', head=?e, headC=?h, headS=?g, val='tv', vf='bse', vft='nf', voice=?m, vtype=?i]]
+nv -> verb
+	[h=[aux='no', cat='nv', head=?d, headC=?f, headS=?e, neg=?h, pf=?i, pg=?j, val='tv', vf='ed', vft='nfin', voice='pas', vtype=?g], h1=[aux='no', cat='verb', head=?d, headC=?f, headS=?e, neg=?h, pf=?i, pg=?j, val='tv', vf='ed', vft='nfin', voice='pas', vtype=?g]]
+nv -> verb
+	[h=[aux='no', cat='nv', head=?d, headC=?f, headS=?e, neg=?i, pf=?j, pg=?k, val='tv', vf=?h, vft='nfin', voice='act', vtype=?g], h1=[aux='no', cat='verb', head=?d, headC=?f, headS=?e, neg=?i, pf=?j, pg=?k, val='tv', vf=?h, vft='nfin', voice='act', vtype=?g]]
+nv -> aux nv
+	[h=[aux=?j, cat='nv', head=?e, headS=?g, neg='y', pf=?k, pg=?l, val='iv', vf=?i, vft='nfin', voice=?m, vtype=?h], h1=[aux='not', cat='aux', head=?e, neg='y', vtype='aux'], h2=[aux=?j, cat='nv', head=?e, headS=?g, neg='no', pf=?k, pg=?l, val='iv', vf=?i, vft='nfin', voice=?m, vtype=?h]]
+nv -> nav1 verb
+	[h=[aux='be', cat='nv', head=?e, headS=?g, neg=?i, pf=?j, pg='y', val='iv', vf='to', vft='nfin', voice=?k, vtype=?h], h1=[aux='be', cat='nav1', head=?e, neg=?i, pf=?j, pg='no', vf='to', vft='nfin', vtype='aux'], h2=[cat='verb', head=?e, headS=?g, pg='y', val='iv', vf='ing', vft='nf', voice=?k, vtype=?h]]
+nv -> nav1 verb
+	[h=[aux='be', cat='nv', head=?e, headS=?g, neg=?i, pf='y', pg='y', val='iv', vf='ing', vft='nfin', voice=?j, vtype=?h], h1=[aux='be', cat='nav1', head=?e, neg=?i, pf='y', pg='no', vf='ing', vft='nfin', vtype='aux'], h2=[cat='verb', head=?e, headS=?g, pg='y', val='iv', vf='ing', vft='nf', voice=?j, vtype=?h]]
+nv -> nav0 verb
+	[h=[aux='have', cat='nv', head=?e, headS=?g, neg=?j, pf='y', pg=?k, val='iv', vf=?i, vft='nfin', voice=?l, vtype=?h], h1=[aux='have', cat='nav0', head=?e, neg=?j, pf='no', pg=?k, vf=?i, vft='nfin', vtype='aux'], h2=[cat='verb', head=?e, headS=?g, pf='y', val='iv', vf='ed', vft='nf', voice=?l, vtype=?h]]
+nv -> aux verb
+	[h=[aux='no', cat='nv', head=?e, headS=?g, neg=?i, pf=?j, pg=?k, val='iv', vf='to', vft='nfin', voice=?l, vtype=?h], h1=[aux='to', cat='aux', head=?e, neg=?i, pf=?j, pg=?k, vf='to', vft='nfin', vtype='aux'], h2=[aux='no', cat='verb', head=?e, headS=?g, val='iv', vf='bse', vft='nf', voice=?l, vtype=?h]]
+nv -> verb
+	[h=[aux='no', cat='nv', head=?d, headS=?e, neg=?h, pf=?i, pg=?j, val='iv', vf=?g, vft='nfin', voice=?k, vtype=?f], h1=[aux='no', cat='verb', head=?d, headS=?e, neg=?h, pf=?i, pg=?j, val='iv', vf=?g, vft='nfin', voice=?k, vtype=?f]]
+nvo -> nv obj obj
+	[h=[cat='nvo', ctype=?l, head=?f, headC1=?h, headC2=?j, headS=?g, stype='no', val='dv', vf=?o, vft='nfin', voice='act', vtype=?n], h1=[cat='nv', head=?f, headC1=?j, headC2=?h, headS=?g, val='dv', vf=?o, vft='nfin', voice='act', vtype=?n], h2=[cat='obj', ctype=?l, head=?h], h3=[cat='obj', ctype=?l, head=?j]]
+nvo -> nv obj pobj
+	[h=[cat='nvo', ctype=?m, head=?f, headC1=?i, headC2=?k, headS=?h, stype='no', val='dv', vf=?p, vft='nfin', voice='act', vtype=?o], h1=[cat='nv', head=?f, headC1=?i, headC2=?k, headS=?h, val='dv', vf=?p, vft='nfin', voice='act', vtype=?o], h2=[cat='obj', ctype=?m, head=?i], h3=[cat='pobj', comp=?k, ctype=?m, link=?f]]
+nvo -> nv pobj
+	[h=[cat='nvo', ctype=?j, head=?e, headC=?h, headS=?g, stype='no', val='tv', vf=?l, vft='nfin', voice='pas', vtype=?k], h1=[cat='nv', head=?e, headC=?g, headS=?h, val='tv', vf=?l, vft='nfin', voice='pas', vtype=?k], h2=[cat='pobj', comp=?h, ctype=?j, link=?e]]
+nvo -> nv obj
+	[h=[cat='nvo', ctype=?i, head=?e, headC=?g, headS=?f, stype='no', val='tv', vf=?k, vft='nfin', voice='act', vtype=?j], h1=[cat='nv', head=?e, headC=?g, headS=?f, val='tv', vf=?k, vft='nfin', voice='act', vtype=?j], h2=[cat='obj', ctype=?i, head=?g]]
+nvo -> nv
+	[h=[cat='nvo', ctype='s', head=?d, headS=?e, stype='no', val='iv', vf=?g, vft='nfin', voice='act', vtype=?f], h1=[cat='nv', head=?d, headS=?e, val='iv', vf=?g, vft='nfin', voice='act', vtype=?f]]
+tocl -> nvo
+	[h=[cat='tocl', ctype=?g, head=?d, headS=?e, stype=?f, val=?i, vf='to', vft='nfin', voice=?j, vtype=?h], h1=[cat='nvo', ctype=?g, head=?d, headS=?e, stype=?f, val=?i, vf='to', vft='nfin', voice=?j, vtype=?h]]
+ncl -> nv tocl
+	[h=[cat='ncl', ctype='c', head=?e, headC=?h, headS=?f, stype='no', val='tv', vf=?j, vft='nfin', voice=?k, vtype='csbj'], h1=[cat='nv', head=?e, headC=?h, headS=?f, val='tv', vf=?j, vft='nfin', voice=?k, vtype='csbj'], h2=[cat='tocl', head=?h, headS=?f]]
+ncl -> nv tocl
+	[h=[cat='ncl', ctype='c', head=?e, headC=?h, headS=?f, stype='no', val='tv', vf=?j, vft='nfin', voice=?k, vtype='rais'], h1=[cat='nv', head=?e, headC=?h, headS=?f, val='tv', vf=?j, vft='nfin', voice=?k, vtype='rais'], h2=[cat='tocl', head=?h, headS=?f]]
+ncl -> nv obj tocl
+	[h=[cat='ncl', ctype='c', head=?f, headC1=?h, headC2=?k, headS=?g, stype='no', val='dv', vf=?m, vft='nfin', voice=?n, vtype='cobj'], h1=[cat='nv', head=?f, headC1=?h, headC2=?k, headS=?g, val='dv', vf=?m, vft='nfin', voice=?n, vtype='cobj'], h2=[cat='obj', head=?h], h3=[cat='tocl', head=?k, headS=?h]]
+fcl -> sv tocl
+	[h=[cat='fcl', ctype='c', dets=?o, head=?e, headC=?h, headS=?f, int=?p, nr=?n, pers=[?l, ?m], stype=?j, val='tv', vft='fin', voice=?k, vtype='csbj'], h1=[cat='sv', dets=?o, head=?e, headC=?h, headS=?f, int=?p, nr=?n, pers=[?l, ?m], stype=?j, val='tv', vft='fin', voice=?k, vtype='csbj'], h2=[cat='tocl', head=?h, headS=?f]]
+fcl -> sv tocl
+	[h=[cat='fcl', ctype='c', dets=?o, head=?e, headC=?h, headS=?f, int=?p, nr=?n, pers=[?l, ?m], stype=?j, val='tv', vft='fin', voice=?k, vtype='rais'], h1=[cat='sv', dets=?o, head=?e, headC=?h, headS=?f, int=?p, nr=?n, pers=[?l, ?m], stype=?j, val='tv', vft='fin', voice=?k, vtype='rais'], h2=[cat='tocl', head=?h, headS=?f]]
+fcl -> sv obj tocl
+	[h=[cat='fcl', ctype='c', dets=?r, head=?f, headC1=?h, headC2=?k, headS=?g, int=?s, nr=?q, pers=[?o, ?p], stype=?m, val='dv', vft='fin', voice=?n, vtype='cobj'], h1=[cat='sv', dets=?r, head=?f, headC1=?h, headC2=?k, headS=?g, int=?s, nr=?q, pers=[?o, ?p], stype=?m, val='dv', vft='fin', voice=?n, vtype='cobj'], h2=[cat='obj', head=?h], h3=[cat='tocl', head=?k, headS=?h]]
+fcl -> adjc fcl
+	[h=[cat='fcl', ctype=?i, dets=?p, head=?e, headS=?g, int=?q, nr=?o, pers=[?m, ?n], stype=?h, val=?k, vft='fin', voice=?l, vtype=?j], h1=[cat='adjc', link=?e], h2=[cat='fcl', ctype=?i, dets=?p, head=?e, headS=?g, int=?q, nr=?o, pers=[?m, ?n], stype=?h, val=?k, vft='fin', voice=?l, vtype=?j]]
+fcl -> fcl adjc
+	[h=[cat='fcl', ctype='s', dets=?o, head=?e, headS=?g, int=?p, nr=?n, pers=[?l, ?m], stype=?h, val=?j, vft='fin', voice=?k, vtype=?i], h1=[cat='fcl', ctype='s', dets=?o, head=?e, headS=?g, int=?p, nr=?n, pers=[?l, ?m], stype=?h, val=?j, vft='fin', voice=?k, vtype=?i], h2=[cat='adjc', link=?e]]
+fcl -> svo
+	[h=[cat='fcl', ctype=?g, dets=?n, head=?d, headS=?e, int=?o, nr=?m, pers=[?k, ?l], stype=?f, val=?i, vft='fin', voice=?j, vtype=?h], h1=[cat='svo', ctype=?g, dets=?n, head=?d, headS=?e, int=?o, nr=?m, pers=[?k, ?l], stype=?f, val=?i, vft='fin', voice=?j, vtype=?h]]
+relcl -> fcl
+	[h=[cat='relcl', ctype=?g, dets='no', head=?d, int='no', mod=?e, nr=?l, pers=[?j, ?k], stype=?f, val=?i, vf='no', vft='fin', voice='act', vtype=?h], h1=[cat='fcl', ctype=?g, dets='no', head=?d, headS=?e, int='no', nr=?l, pers=[?j, ?k], stype=?f, val=?i, vft='fin', voice='act', vtype=?h]]
+rrcl -> nvo
+	[h=[cat='rrcl', ctype='s', head=?d, mod=?e, stype='no', val='iv', vf=?g, vft='nfin', voice=?h, vtype=?f], h1=[cat='nvo', head=?d, headS=?e, val='iv', vf=?g, vft='nfin', voice=?h, vtype=?f]]
+rrcl -> nvo
+	[h=[cat='rrcl', ctype=?g, head=?d, mod=?e, stype=?f, val='tv', vf='ed', vft='nfin', voice='pas', vtype=?h], h1=[cat='nvo', ctype=?g, head=?d, headS=?e, stype=?f, val='tv', vf='ed', vft='nfin', voice='pas', vtype=?h]]
+rrcl -> nvo
+	[h=[cat='rrcl', ctype=?g, head=?d, mod=?e, stype=?f, val='tv', vf='ing', vft='nfin', voice='act', vtype=?h], h1=[cat='nvo', ctype=?g, head=?d, headS=?e, stype=?f, val='tv', vf='ing', vft='nfin', voice='act', vtype=?h]]
+p -> prep
+	[h=[cat='p', comp=?f, head=?d, link=?e], h1=[cat='prep', comp=?f, head=?d, link=?e]]

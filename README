@@ -1,0 +1,17 @@
+Parser for Lexicalized Well-Founded Grammars.
+
+The code for the grammar and the parser is inspired by the NLTK library.
+Essentially, the code is a Python implementation of Muresan's (2010) constraint-based grammatical framework.
+
+The grammar module (LWFG.py) codes the grammar and a method to parse an input grammar into an LWFG grammar object.
+Two examples grammars have also been provided (LWFG_TEST[GRAM|LEX].txt).
+
+The parser is a bottom-up active chart parser that parses sentences using the input grammar.
+It runs in two modes: 1) Parser mode, where it produces parse trees corresponding to the input sentence;  2) Eval mode, where it produces evaluation metrics, namely, a) parsing time, b) chart size, and c) number of derivations.
+
+The other source files are for evaluation purposes, and contain methods to generate random sentences from an input grammar, to generate chart sheets combining evaluation metrics, and to evaluate sentences using a CFG-based bottom-up chart parser.
+
+
+References:
+
+Muresan, S. (2010). A learnable constraint-based grammar formalism. In Proceedings of the 23rd International Conference on Computational Linguistics: Posters (pp. 885-893). Association for Computational Linguistics.

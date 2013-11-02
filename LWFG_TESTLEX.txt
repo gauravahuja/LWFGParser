@@ -1,0 +1,1113 @@
+relpro -> 'what'
+	[h=[case=[?anon18, 'ng'], cat='relpro', dets='no', head=?x, hum='no', int='y', nr=?anon17, pers=[?anon16, 3]]]
+	?x.is_a=what
+relpro -> 'that'
+	[h=[case=[?anon14, 'ng'], cat='relpro', dets='no', head=?x, hum=?anon15, int='no', nr=?anon13, pers=[?anon12, 3]]]
+	?x.is_a=that
+relpro -> 'which'
+	[h=[case=[?anon9, 'ng'], cat='relpro', dets='no', head=?x, hum=?anon11, int=?anon10, nr=?anon8, pers=[?anon7, 3]]]
+	?x.is_a=which
+relpro -> 'whom'
+	[h=[case=['a', 'ng'], cat='relpro', dets='no', head=?x, hum='y', int=?anon6, nr=?anon5, pers=[?anon4, 3]]]
+	?x.is_a=whom
+relpro -> 'who'
+	[h=[case=['n', 'ng'], cat='relpro', dets='no', head=?x, hum='y', int=?anon3, nr=?anon2, pers=[?anon1, 3]]]
+	?x.is_a=who
+relpro -> 'how'
+	[h=[cat='relpro', head=?x, int=?anon4, mod=?y]]
+	?x.is_a=how,?y.manner=?x
+relpro -> 'why'
+	[h=[cat='relpro', head=?x, int=?anon3, mod=?y]]
+	?y.reason=?x,?x.is_a=why
+relpro -> 'where'
+	[h=[cat='relpro', head=?x, int=?anon2, mod=?y]]
+	?y.place=?x,?x.is_a=where
+relpro -> 'when'
+	[h=[cat='relpro', head=?x, int=?anon1, mod=?y]]
+	?x.is_a=when,?y.time=?x
+prep -> 'to'
+	[h=[cat='prep', comp=?z, head=?x, link=?y]]
+	?x.is_a=to,?y.?x=?z
+prep -> 'above'
+	[h=[cat='prep', comp=?z, head=?x, link=?y]]
+	?x.is_a=above,?y.?x=?z
+prep -> 'of'
+	[h=[cat='prep', comp=?z, head=?x, link=?y]]
+	?x.is_a=of,?y.?x=?z
+prep -> 'on'
+	[h=[cat='prep', comp=?z, head=?x, link=?y]]
+	?x.is_a=on,?y.?x=?z
+prep -> 'with'
+	[h=[cat='prep', comp=?z, head=?x, link=?y]]
+	?x.is_a=with,?y.?x=?z
+prep -> 'from'
+	[h=[cat='prep', comp=?z, head=?x, link=?y]]
+	?x.is_a=from,?y.?x=?z
+prep -> 'for'
+	[h=[cat='prep', comp=?z, head=?x, link=?y]]
+	?x.is_a=for,?y.?x=?z
+prep -> 'in'
+	[h=[cat='prep', comp=?z, head=?x, link=?y]]
+	?x.is_a=in,?y.?x=?z
+prep -> 'by'
+	[h=[cat='prep', comp=?z, head=?x, link=?y]]
+	?x.is_a=by,?y.?x=?z
+prep -> 'at'
+	[h=[cat='prep', comp=?z, head=?x, link=?y]]
+	?x.is_a=at,?y.?x=?z
+adv -> 'very'
+	[h=[cat='adv', head=?x]]
+	?x.?anon3=very
+adv -> 'usually'
+	[h=[cat='adv', head=?x]]
+	?x.?anon2=usually
+adv -> 'not'
+	[h=[cat='adv', head=?x]]
+	?x.?anon1=not
+adv -> 'yesterday'
+	[h=[cat='adv', head=?x]]
+	?x.time=yesterday
+adv -> 'amazingly'
+	[h=[cat='adv', head=?x]]
+	?x.how=amazingly
+adv -> 'today'
+	[h=[cat='adv', head=?x]]
+	?x.time=today
+adv -> 'soon'
+	[h=[cat='adv', head=?x]]
+	?x.time=soon
+adv -> 'pretty'
+	[h=[cat='adv', head=?x]]
+	?x.how=pretty
+adv -> 'morphologically'
+	[h=[cat='adv', head=?x]]
+	?x.how=morphologically
+adv -> 'theoretically'
+	[h=[cat='adv', head=?x]]
+	?x.how=theoretically
+adv -> 'extremely'
+	[h=[cat='adv', head=?x]]
+	?x.how=extremely
+verb -> 'liking'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='ing', vft='nfin', voice='act', vtype='csbj']]
+	?x.vft=ing,?x.pnt=?z,?x.is_a=like,?x.agt=?y
+verb -> 'liking'
+	[h=[cat='verb', head=?x, headC=?z, headS=?y, pg='y', val='tv', vf='ing', vft='nf', voice='act', vtype='csbj']]
+	?x.agt=?y,?x.pg=y,?x.is_a=like,?x.pnt=?z
+verb -> 'liked'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='ed', vft='nfin', voice='pas', vtype='csbj']]
+	?x.vft=ed,?x.pnt=?z,?x.is_a=like,?x.voice=pas,?x.agt=?y
+verb -> 'liked'
+	[h=[cat='verb', head=?x, headC=?y, headS=?z, val='tv', vft='nf', voice='pas', vtype='csbj']]
+	?x.voice=pas,?x.pnt=?z,?x.is_a=like,?x.agt=?y
+verb -> 'liked'
+	[h=[cat='verb', head=?x, headC=?z, headS=?y, pf='y', val='tv', vf='ed', vft='nf', voice='act', vtype='csbj']]
+	?x.pf=y,?x.agt=?y,?x.pnt=?z,?x.is_a=like
+verb -> 'liked'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr=?anon114, pers=?anon113, pf='no', pg='no', tense='pt', val='tv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pt,?x.agt=?y,?x.pnt=?z,?x.is_a=like
+verb -> 'liked'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr=?anon108, pers=[?anon107, ?anon107], pf='no', pg='no', tense='pt', val='tv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pt,?x.agt=?y,?x.pnt=?z,?x.is_a=like
+verb -> 'likes'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon106, 3], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pr,?x.agt=?y,?x.pnt=?z,?x.is_a=like
+verb -> 'like'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='pl', pers=[?anon103, ?anon103], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pr,?x.agt=?y,?x.pnt=?z,?x.is_a=like
+verb -> 'like'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon102, 'n3'], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pr,?x.agt=?y,?x.pnt=?z,?x.is_a=like
+verb -> 'like'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='bse', vft='nfin', voice='act', vtype='csbj']]
+	?x.vft=bse,?x.pnt=?z,?x.is_a=like,?x.agt=?y
+verb -> 'like'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, val='tv', vf='bse', vft='nf', voice='act', vtype='csbj']]
+	?x.agt=?y,?x.pnt=?z,?x.is_a=like
+verb -> 'giving'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', pf='no', pg='no', val='dv', vf='ing', vft='nfin', voice='act', vtype='norm']]
+	?x.vft=ing,?x.rec=?w,?x.is_a=give,?x.thm=?z,?x.agt=?y
+verb -> 'giving'
+	[h=[cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, pg='y', val='dv', vf='ing', vft='nf', voice='act', vtype='norm']]
+	?x.agt=?y,?x.pg=y,?x.is_a=give,?x.thm=?z,?x.rec=?w
+verb -> 'given'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', pf='no', pg='no', val='dv', vf='ed', vft='nfin', voice='pas', vtype='norm']]
+	?x.voice=pas,?x.vft=ed,?x.thm=?z,?x.rec=?w,?x.is_a=give,?x.agt=?y
+verb -> 'given'
+	[h=[cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, val='dv', vft='nf', voice='pas', vtype='norm']]
+	?x.voice=pas,?x.rec=?w,?x.is_a=give,?x.thm=?z,?x.agt=?y
+verb -> 'given'
+	[h=[cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, pf='y', val='dv', vf='ed', vft='nf', voice='act', vtype='norm']]
+	?x.pf=y,?x.agt=?y,?x.is_a=give,?x.thm=?z,?x.rec=?w
+verb -> 'gave'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr=?anon51, pers=?anon50, pf='no', pg='no', tense='pt', val='dv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pt,?x.agt=?y,?x.is_a=give,?x.thm=?z,?x.rec=?w
+verb -> 'gave'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr=?anon49, pers=[?anon48, ?anon48], pf='no', pg='no', tense='pt', val='dv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pt,?x.agt=?y,?x.is_a=give,?x.thm=?z,?x.rec=?w
+verb -> 'gives'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='sg', pers=[?anon47, 3], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=give,?x.thm=?z,?x.rec=?w
+verb -> 'give'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='pl', pers=[?anon44, ?anon44], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=give,?x.thm=?z,?x.rec=?w
+verb -> 'give'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='sg', pers=[?anon43, 'n3'], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=give,?x.thm=?z,?x.rec=?w
+verb -> 'give'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', pf='no', pg='no', val='dv', vf='bse', vft='nfin', voice='act', vtype='norm']]
+	?x.vft=bse,?x.rec=?w,?x.is_a=give,?x.thm=?z,?x.agt=?y
+verb -> 'give'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, val='dv', vf='bse', vft='nf', voice='act', vtype='norm']]
+	?x.agt=?y,?x.is_a=give,?x.thm=?z,?x.rec=?w
+verb -> 'trying'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='ing', vft='nfin', voice='act', vtype='csbj']]
+	?x.vft=ing,?x.is_a=try,?x.act=?z,?x.agt=?y
+verb -> 'trying'
+	[h=[cat='verb', head=?x, headC=?z, headS=?y, pg='y', val='tv', vf='ing', vft='nf', voice='act', vtype='csbj']]
+	?x.agt=?y,?x.pg=y,?x.is_a=try,?x.act=?z
+verb -> 'tried'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='ed', vft='nfin', voice='pas', vtype='csbj']]
+	?x.vft=ed,?x.voice=pas,?x.is_a=try,?x.act=?z,?x.agt=?y
+verb -> 'tried'
+	[h=[cat='verb', head=?x, headC=?y, headS=?z, val='tv', vft='nf', voice='pas', vtype='csbj']]
+	?x.voice=pas,?x.is_a=try,?x.act=?z,?x.agt=?y
+verb -> 'tried'
+	[h=[cat='verb', head=?x, headC=?z, headS=?y, pf='y', val='tv', vf='ed', vft='nf', voice='act', vtype='csbj']]
+	?x.pf=y,?x.agt=?y,?x.is_a=try,?x.act=?z
+verb -> 'tried'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr=?anon97, pers=?anon96, pf='no', pg='no', tense='pt', val='tv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pt,?x.agt=?y,?x.is_a=try,?x.act=?z
+verb -> 'tries'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon95, 3], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=try,?x.act=?z
+verb -> 'try'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='pl', pers=[?anon94, ?anon94], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=try,?x.act=?z
+verb -> 'try'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon93, 'n3'], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=try,?x.act=?z
+verb -> 'try'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='bse', vft='nfin', voice='act', vtype='csbj']]
+	?x.vft=bse,?x.is_a=try,?x.act=?z,?x.agt=?y
+verb -> 'try'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, val='tv', vf='bse', vft='nf', voice='act', vtype='csbj']]
+	?x.agt=?y,?x.is_a=try,?x.act=?z
+verb -> 'loved'
+	[h=[cat='verb', head=?x, headC=?z, headS=?y, pf='y', val='tv', vf='ed', vft='nf', voice='act', vtype='norm']]
+	?x.pf=y,?x.agt=?y,?x.pnt=?z,?x.is_a=love
+verb -> 'loving'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='ing', vft='nfin', voice='act', vtype='norm']]
+	?x.vft=ing,?x.pnt=?z,?x.is_a=love,?x.agt=?y
+verb -> 'loving'
+	[h=[cat='verb', head=?x, headC=?z, headS=?y, pg='y', val='tv', vf='ing', vft='nf', voice='act', vtype='norm']]
+	?x.agt=?y,?x.pg=y,?x.is_a=love,?x.pnt=?z
+verb -> 'loved'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr=?anon86, pers=[?anon85, ?anon85], pf='no', pg='no', tense='pt', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pt,?x.agt=?y,?x.pnt=?z,?x.is_a=love
+verb -> 'loves'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon84, 3], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.pnt=?z,?x.is_a=love
+verb -> 'love'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='pl', pers=[?anon81, ?anon81], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.pnt=?z,?x.is_a=love
+verb -> 'love'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon80, 'n3'], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.pnt=?z,?x.is_a=love
+verb -> 'love'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='bse', vft='nfin', voice='act', vtype='norm']]
+	?x.vft=bse,?x.pnt=?z,?x.is_a=love,?x.agt=?y
+verb -> 'love'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, val='tv', vf='bse', vft='nf', voice='act', vtype='norm']]
+	?x.agt=?y,?x.pnt=?z,?x.is_a=love
+verb -> 'loved'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='ed', vft='nfin', voice='pas', vtype='norm']]
+	?x.vft=ed,?x.pnt=?z,?x.is_a=love,?x.voice=pas,?x.agt=?y
+verb -> 'loved'
+	[h=[cat='verb', head=?x, headC=?y, headS=?z, val='tv', vft='nf', voice='pas', vtype='norm']]
+	?x.voice=pas,?x.pnt=?z,?x.is_a=love,?x.agt=?y
+verb -> 'continuing'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='ing', vft='nfin', voice='act', vtype='rais']]
+	?x.vft=ing,?x.cont_act=?z,?x.is_a=continue,?x.non_agt=?y
+verb -> 'continuing'
+	[h=[cat='verb', head=?x, headC=?z, headS=?y, pg='y', val='tv', vf='ing', vft='nf', voice='act', vtype='rais']]
+	?x.non_agt=?y,?x.pg=y,?x.is_a=continue,?x.cont_act=?z
+verb -> 'continued'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='ed', vft='nfin', voice='pas', vtype='rais']]
+	?x.vft=ed,?x.cont_act=?z,?x.is_a=continue,?x.voice=pas,?x.non_agt=?y
+verb -> 'continued'
+	[h=[cat='verb', head=?x, headC=?y, headS=?z, val='tv', vft='nf', voice='pas', vtype='rais']]
+	?x.voice=pas,?x.cont_act=?z,?x.is_a=continue,?x.non_agt=?y
+verb -> 'continued'
+	[h=[cat='verb', head=?x, headC=?z, headS=?y, pf='y', val='tv', vf='ed', vft='nf', voice='act', vtype='rais']]
+	?x.pf=y,?x.non_agt=?y,?x.is_a=continue,?x.cont_act=?z
+verb -> 'continued'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr=?anon75, pers=?anon74, pf='no', pg='no', tense='pt', val='tv', vf='no', vft='fin', voice='act', vtype='rais']]
+	?x.tense=pt,?x.non_agt=?y,?x.is_a=continue,?x.cont_act=?z
+verb -> 'continues'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon73, 3], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='rais']]
+	?x.tense=pr,?x.non_agt=?y,?x.is_a=continue,?x.cont_act=?z
+verb -> 'continue'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='pl', pers=[?anon72, ?anon72], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='rais']]
+	?x.tense=pr,?x.non_agt=?y,?x.is_a=continue,?x.cont_act=?z
+verb -> 'continue'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon71, 'n3'], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='rais']]
+	?x.tense=pr,?x.non_agt=?y,?x.is_a=continue,?x.cont_act=?z
+verb -> 'continue'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='bse', vft='nfin', voice='act', vtype='rais']]
+	?x.vft=bse,?x.cont_act=?z,?x.is_a=continue,?x.non_agt=?y
+verb -> 'continue'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, val='tv', vf='bse', vft='nf', voice='act', vtype='rais']]
+	?x.non_agt=?y,?x.is_a=continue,?x.cont_act=?z
+verb -> 'seeming'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='ing', vft='nfin', voice='act', vtype='rais']]
+	?x.vft=ing,?x.is_a=seem,?x.seem_act=?z,?x.non_agt=?y
+verb -> 'seeming'
+	[h=[cat='verb', head=?x, headC=?z, headS=?y, pg='y', val='tv', vf='ing', vft='nf', voice='act', vtype='rais']]
+	?x.non_agt=?y,?x.pg=y,?x.is_a=seem,?x.seem_act=?z
+verb -> 'seemed'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='ed', vft='nfin', voice='pas', vtype='rais']]
+	?x.vft=ed,?x.voice=pas,?x.is_a=seem,?x.seem_act=?z,?x.non_agt=?y
+verb -> 'seemed'
+	[h=[cat='verb', head=?x, headC=?y, headS=?z, val='tv', vft='nf', voice='pas', vtype='rais']]
+	?x.voice=pas,?x.is_a=seem,?x.seem_act=?z,?x.non_agt=?y
+verb -> 'seemed'
+	[h=[cat='verb', head=?x, headC=?z, headS=?y, pf='y', val='tv', vf='ed', vft='nf', voice='act', vtype='rais']]
+	?x.pf=y,?x.non_agt=?y,?x.is_a=seem,?x.seem_act=?z
+verb -> 'seemed'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr=?anon64, pers=?anon63, pf='no', pg='no', tense='pt', val='tv', vf='no', vft='fin', voice='act', vtype='rais']]
+	?x.tense=pt,?x.non_agt=?y,?x.is_a=seem,?x.seem_act=?z
+verb -> 'seems'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon62, 3], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='rais']]
+	?x.tense=pr,?x.non_agt=?y,?x.is_a=seem,?x.seem_act=?z
+verb -> 'seem'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='pl', pers=[?anon61, ?anon61], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='rais']]
+	?x.tense=pr,?x.non_agt=?y,?x.is_a=seem,?x.seem_act=?z
+verb -> 'seem'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon60, 'n3'], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='rais']]
+	?x.tense=pr,?x.non_agt=?y,?x.is_a=seem,?x.seem_act=?z
+verb -> 'seem'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='bse', vft='nfin', voice='act', vtype='rais']]
+	?x.vft=bse,?x.is_a=seem,?x.seem_act=?z,?x.non_agt=?y
+verb -> 'seem'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, val='tv', vf='bse', vft='nf', voice='act', vtype='rais']]
+	?x.non_agt=?y,?x.is_a=seem,?x.seem_act=?z
+verb -> 'continued'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr=?anon53, pers=?anon52, pf='no', pg='no', tense='pt', val='tv', vf='no', vft='fin', voice='act', vtype='rais']]
+	?x.tense=pt,?x.non_agt=?y,?x.is_a=continue,?x.cont_act=?z
+verb -> 'continues'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon51, 3], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='rais']]
+	?x.tense=pr,?x.non_agt=?y,?x.is_a=continue,?x.cont_act=?z
+verb -> 'continue'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='pl', pers=[?anon50, ?anon50], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='rais']]
+	?x.tense=pr,?x.non_agt=?y,?x.is_a=continue,?x.cont_act=?z
+verb -> 'continue'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon49, 'n3'], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='rais']]
+	?x.tense=pr,?x.non_agt=?y,?x.is_a=continue,?x.cont_act=?z
+verb -> 'tried'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr=?anon42, pers=?anon41, pf='no', pg='no', tense='pt', val='tv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pt,?x.agt=?y,?x.is_a=try,?x.act=?z
+verb -> 'tries'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon40, 3], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=try,?x.act=?z
+verb -> 'try'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='pl', pers=[?anon39, ?anon39], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=try,?x.act=?z
+verb -> 'try'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon38, 'n3'], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=try,?x.act=?z
+verb -> 'promising'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', pf='no', pg='no', val='dv', vf='ing', vft='nfin', voice='act', vtype='csbj']]
+	?x.vft=ing,?x.rec=?z,?x.is_a=promise,?x.act=?w,?x.agt=?y
+verb -> 'promising'
+	[h=[cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, pg='y', val='dv', vf='ing', vft='nf', voice='act', vtype='csbj']]
+	?x.agt=?y,?x.pg=y,?x.is_a=promise,?x.act=?w,?x.rec=?z
+verb -> 'promised'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', pf='no', pg='no', val='dv', vf='ed', vft='nfin', voice='pas', vtype='csbj']]
+	?x.voice=pas,?x.vft=ed,?x.rec=?z,?x.is_a=promise,?x.agt=?y,?x.act=?w
+verb -> 'promised'
+	[h=[cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, val='dv', vft='nf', voice='pas', vtype='csbj']]
+	?x.voice=pas,?x.rec=?z,?x.is_a=promise,?x.act=?w,?x.agt=?y
+verb -> 'promised'
+	[h=[cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, pf='y', val='dv', vf='ed', vft='nf', voice='act', vtype='csbj']]
+	?x.pf=y,?x.agt=?y,?x.is_a=promise,?x.act=?w,?x.rec=?z
+verb -> 'promised'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr=?anon38, pers=?anon37, pf='no', pg='no', tense='pt', val='dv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pt,?x.agt=?y,?x.is_a=promise,?x.act=?w,?x.rec=?z
+verb -> 'promises'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='sg', pers=[?anon36, 3], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=promise,?x.act=?w,?x.rec=?z
+verb -> 'promise'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='pl', pers=[?anon35, ?anon35], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=promise,?x.act=?w,?x.rec=?z
+verb -> 'promise'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='sg', pers=[?anon34, 'n3'], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='csbj']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=promise,?x.act=?w,?x.rec=?z
+verb -> 'promise'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', pf='no', pg='no', val='dv', vf='bse', vft='nfin', voice='act', vtype='csbj']]
+	?x.vft=bse,?x.rec=?z,?x.is_a=promise,?x.act=?w,?x.agt=?y
+verb -> 'promise'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, val='dv', vf='bse', vft='nf', voice='act', vtype='csbj']]
+	?x.agt=?y,?x.is_a=promise,?x.act=?w,?x.rec=?z
+verb -> 'telling'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', pf='no', pg='no', val='dv', vf='ing', vft='nfin', voice='act', vtype='cobj']]
+	?x.vft=ing,?x.rec=?z,?x.is_a=tell,?x.act=?w,?x.agt=?y
+verb -> 'telling'
+	[h=[cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, pg='y', val='dv', vf='ing', vft='nf', voice='act', vtype='cobj']]
+	?x.agt=?y,?x.pg=y,?x.is_a=tell,?x.act=?w,?x.rec=?z
+verb -> 'told'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', pf='no', pg='no', val='dv', vf='ed', vft='nfin', voice='pas', vtype='cobj']]
+	?x.voice=pas,?x.vft=ed,?x.rec=?z,?x.is_a=tell,?x.agt=?y,?x.act=?w
+verb -> 'told'
+	[h=[cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, val='dv', vft='nf', voice='pas', vtype='cobj']]
+	?x.voice=pas,?x.rec=?z,?x.is_a=tell,?x.act=?w,?x.agt=?y
+verb -> 'told'
+	[h=[cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, pf='y', val='dv', vf='ed', vft='nf', voice='act', vtype='cobj']]
+	?x.pf=y,?x.agt=?y,?x.is_a=tell,?x.act=?w,?x.rec=?z
+verb -> 'told'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr=?anon27, pers=?anon26, pf='no', pg='no', tense='pt', val='dv', vf='no', vft='fin', voice='act', vtype='cobj']]
+	?x.tense=pt,?x.agt=?y,?x.is_a=tell,?x.act=?w,?x.rec=?z
+verb -> 'tells'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='sg', pers=[?anon25, 3], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='cobj']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=tell,?x.act=?w,?x.rec=?z
+verb -> 'tell'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='pl', pers=[?anon24, ?anon24], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='cobj']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=tell,?x.act=?w,?x.rec=?z
+verb -> 'tell'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='sg', pers=[?anon23, 'n3'], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='cobj']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=tell,?x.act=?w,?x.rec=?z
+verb -> 'tell'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', pf='no', pg='no', val='dv', vf='bse', vft='nfin', voice='act', vtype='cobj']]
+	?x.vft=bse,?x.rec=?z,?x.is_a=tell,?x.act=?w,?x.agt=?y
+verb -> 'tell'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, val='dv', vf='bse', vft='nf', voice='act', vtype='cobj']]
+	?x.agt=?y,?x.is_a=tell,?x.act=?w,?x.rec=?z
+verb -> 'lent'
+	[h=[cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, pf='y', val='dv', vf='ed', vft='nf', voice='act', vtype='norm']]
+	?x.pf=y,?x.agt=?y,?x.is_a=lend,?x.thm=?z,?x.rec=?w
+verb -> 'lending'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', pf='no', pg='no', val='dv', vf='ing', vft='nfin', voice='act', vtype='norm']]
+	?x.vft=ing,?x.rec=?w,?x.is_a=lend,?x.thm=?z,?x.agt=?y
+verb -> 'lending'
+	[h=[cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, pg='y', val='dv', vf='ing', vft='nf', voice='act', vtype='norm']]
+	?x.agt=?y,?x.pg=y,?x.is_a=lend,?x.thm=?z,?x.rec=?w
+verb -> 'lent'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr=?anon16, pers=[?anon15, ?anon15], pf='no', pg='no', tense='pt', val='dv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pt,?x.agt=?y,?x.is_a=lend,?x.thm=?z,?x.rec=?w
+verb -> 'lends'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='sg', pers=[?anon14, 3], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=lend,?x.thm=?z,?x.rec=?w
+verb -> 'lend'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='pl', pers=[?anon11, ?anon11], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=lend,?x.thm=?z,?x.rec=?w
+verb -> 'lend'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='sg', pers=[?anon10, 'n3'], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=lend,?x.thm=?z,?x.rec=?w
+verb -> 'lend'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', pf='no', pg='no', val='dv', vf='bse', vft='nfin', voice='act', vtype='norm']]
+	?x.vft=bse,?x.rec=?w,?x.is_a=lend,?x.thm=?z,?x.agt=?y
+verb -> 'lend'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, val='dv', vf='bse', vft='nf', voice='act', vtype='norm']]
+	?x.agt=?y,?x.is_a=lend,?x.thm=?z,?x.rec=?w
+verb -> 'lent'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', pf='no', pg='no', val='dv', vf='ed', vft='nfin', voice='pas', vtype='norm']]
+	?x.voice=pas,?x.vft=ed,?x.thm=?z,?x.rec=?w,?x.is_a=lend,?x.agt=?y
+verb -> 'lent'
+	[h=[cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, val='dv', vft='nf', voice='pas', vtype='norm']]
+	?x.voice=pas,?x.rec=?w,?x.is_a=lend,?x.thm=?z,?x.agt=?y
+verb -> 'gave'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr=?anon9, pers=?anon8, pf='no', pg='no', tense='pt', val='dv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pt,?x.agt=?y,?x.is_a=give,?x.thm=?z,?x.rec=?w
+verb -> 'gave'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr=?anon7, pers=[?anon6, ?anon6], pf='no', pg='no', tense='pt', val='dv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pt,?x.agt=?y,?x.is_a=give,?x.thm=?z,?x.rec=?w
+verb -> 'gives'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='sg', pers=[?anon5, 3], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=give,?x.thm=?z,?x.rec=?w
+verb -> 'give'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='pl', pers=[?anon2, ?anon2], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=give,?x.thm=?z,?x.rec=?w
+verb -> 'give'
+	[h=[aux='no', cat='verb', head=?x, headC1=?z, headC2=?w, headS=?y, neg='no', nr='sg', pers=[?anon1, 'n3'], pf='no', pg='no', tense='pr', val='dv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=give,?x.thm=?z,?x.rec=?w
+verb -> 'characterized'
+	[h=[cat='verb', head=?x, headC=?z, headS=?y, pf='y', val='tv', vf='ed', vft='nf', voice='act', vtype='norm']]
+	?x.pf=y,?x.symptom=?y,?x.is_a=characterize,?x.desease=?z
+verb -> 'characterizing'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='ing', vft='nfin', voice='act', vtype='norm']]
+	?x.vft=ing,?x.symptom=?y,?x.is_a=characterize,?x.desease=?z
+verb -> 'characterizing'
+	[h=[cat='verb', head=?x, headC=?z, headS=?y, pg='y', val='tv', vf='ing', vft='nf', voice='act', vtype='norm']]
+	?x.symptom=?y,?x.pg=y,?x.is_a=characterize,?x.desease=?z
+verb -> 'characterized'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr=?anon31, pers=[?anon30, ?anon30], pf='no', pg='no', tense='pt', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pt,?x.symptom=?y,?x.is_a=characterize,?x.desease=?z
+verb -> 'characterizes'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon29, 3], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.symptom=?y,?x.is_a=characterize,?x.desease=?z
+verb -> 'characterize'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='pl', pers=[?anon26, ?anon26], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.symptom=?y,?x.is_a=characterize,?x.desease=?z
+verb -> 'characterize'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon25, 'n3'], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.symptom=?y,?x.is_a=characterize,?x.desease=?z
+verb -> 'characterize'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='bse', vft='nfin', voice='act', vtype='norm']]
+	?x.vft=bse,?x.symptom=?y,?x.is_a=characterize,?x.desease=?z
+verb -> 'characterize'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, val='tv', vf='bse', vft='nf', voice='act', vtype='norm']]
+	?x.symptom=?y,?x.is_a=characterize,?x.desease=?z
+verb -> 'characterized'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='ed', vft='nfin', voice='pas', vtype='norm']]
+	?x.vft=ed,?x.symptom=?y,?x.is_a=characterize,?x.voice=pas,?x.desease=?z
+verb -> 'characterized'
+	[h=[cat='verb', head=?x, headC=?y, headS=?z, val='tv', vft='nf', voice='pas', vtype='norm']]
+	?x.voice=pas,?x.symptom=?y,?x.is_a=characterize,?x.desease=?z
+verb -> 'liked'
+	[h=[cat='verb', head=?x, headC=?z, headS=?y, pf='y', val='tv', vf='ed', vft='nf', voice='act', vtype='norm']]
+	?x.pf=y,?x.agt=?y,?x.pnt=?z,?x.is_a=like
+verb -> 'liking'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='ing', vft='nfin', voice='act', vtype='norm']]
+	?x.vft=ing,?x.pnt=?z,?x.is_a=like,?x.agt=?y
+verb -> 'liking'
+	[h=[cat='verb', head=?x, headC=?z, headS=?y, pg='y', val='tv', vf='ing', vft='nf', voice='act', vtype='norm']]
+	?x.agt=?y,?x.pg=y,?x.is_a=like,?x.pnt=?z
+verb -> 'liked'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr=?anon24, pers=?anon23, pf='no', pg='no', tense='pt', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pt,?x.agt=?y,?x.pnt=?z,?x.is_a=like
+verb -> 'liked'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr=?anon18, pers=[?anon17, ?anon17], pf='no', pg='no', tense='pt', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pt,?x.agt=?y,?x.pnt=?z,?x.is_a=like
+verb -> 'likes'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon16, 3], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.pnt=?z,?x.is_a=like
+verb -> 'like'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='pl', pers=[?anon13, ?anon13], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.pnt=?z,?x.is_a=like
+verb -> 'like'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon12, 'n3'], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.pnt=?z,?x.is_a=like
+verb -> 'like'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='bse', vft='nfin', voice='act', vtype='norm']]
+	?x.vft=bse,?x.pnt=?z,?x.is_a=like,?x.agt=?y
+verb -> 'like'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, val='tv', vf='bse', vft='nf', voice='act', vtype='norm']]
+	?x.agt=?y,?x.pnt=?z,?x.is_a=like
+verb -> 'liked'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', pf='no', pg='no', val='tv', vf='ed', vft='nfin', voice='pas', vtype='norm']]
+	?x.vft=ed,?x.pnt=?z,?x.is_a=like,?x.voice=pas,?x.agt=?y
+verb -> 'liked'
+	[h=[cat='verb', head=?x, headC=?y, headS=?z, val='tv', vft='nf', voice='pas', vtype='norm']]
+	?x.voice=pas,?x.pnt=?z,?x.is_a=like,?x.agt=?y
+verb -> 'loved'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr=?anon7, pers=[?anon6, ?anon6], pf='no', pg='no', tense='pt', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pt,?x.agt=?y,?x.pnt=?z,?x.is_a=love
+verb -> 'loves'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon5, 3], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.pnt=?z,?x.is_a=love
+verb -> 'love'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='pl', pers=[?anon2, ?anon2], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.pnt=?z,?x.is_a=love
+verb -> 'love'
+	[h=[aux='no', cat='verb', head=?x, headC=?z, headS=?y, neg='no', nr='sg', pers=[?anon1, 'n3'], pf='no', pg='no', tense='pr', val='tv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.pnt=?z,?x.is_a=love
+verb -> 'walked'
+	[h=[cat='verb', head=?x, headS=?y, pf='y', val='iv', vf='ed', vft='nf', voice='act', vtype='norm']]
+	?x.pf=y,?x.agt=?y,?x.is_a=walk
+verb -> 'walking'
+	[h=[aux='no', cat='verb', head=?x, headS=?y, neg='no', pf='no', pg='no', val='iv', vf='ing', vft='nfin', voice='act', vtype='norm']]
+	?x.vft=ing,?x.is_a=walk,?x.agt=?y
+verb -> 'walking'
+	[h=[cat='verb', head=?x, headS=?y, pg='y', val='iv', vf='ing', vft='nf', voice='act', vtype='norm']]
+	?x.agt=?y,?x.pg=y,?x.is_a=walk
+verb -> 'walked'
+	[h=[aux='no', cat='verb', head=?x, headS=?y, neg='no', nr=?anon14, pers=[?anon13, ?anon13], pf='no', pg='no', tense='pt', val='iv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pt,?x.agt=?y,?x.is_a=walk
+verb -> 'walks'
+	[h=[aux='no', cat='verb', head=?x, headS=?y, neg='no', nr='sg', pers=[?anon12, 3], pf='no', pg='no', tense='pr', val='iv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=walk
+verb -> 'walk'
+	[h=[aux='no', cat='verb', head=?x, headS=?y, neg='no', nr='pl', pers=[?anon9, ?anon9], pf='no', pg='no', tense='pr', val='iv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=walk
+verb -> 'walk'
+	[h=[aux='no', cat='verb', head=?x, headS=?y, neg='no', nr='sg', pers=[?anon8, 'n3'], pf='no', pg='no', tense='pr', val='iv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=walk
+verb -> 'walk'
+	[h=[aux='no', cat='verb', head=?x, headS=?y, neg='no', pf='no', pg='no', val='iv', vf='bse', vft='nfin', voice='act', vtype='norm']]
+	?x.vft=bse,?x.is_a=walk,?x.agt=?y
+verb -> 'walk'
+	[h=[aux='no', cat='verb', head=?x, headS=?y, val='iv', vf='bse', vft='nf', voice='act', vtype='norm']]
+	?x.agt=?y,?x.is_a=walk
+verb -> 'gone'
+	[h=[cat='verb', head=?x, headS=?y, pf='y', val='iv', vf='ed', vft='nf', voice='act', vtype='norm']]
+	?x.pf=y,?x.agt=?y,?x.is_a=go
+verb -> 'going'
+	[h=[aux='no', cat='verb', head=?x, headS=?y, neg='no', pf='no', pg='no', val='iv', vf='ing', vft='nfin', voice='act', vtype='norm']]
+	?x.vft=ing,?x.is_a=go,?x.agt=?y
+verb -> 'going'
+	[h=[cat='verb', head=?x, headS=?y, pg='y', val='iv', vf='ing', vft='nf', voice='act', vtype='norm']]
+	?x.agt=?y,?x.pg=y,?x.is_a=go
+verb -> 'went'
+	[h=[aux='no', cat='verb', head=?x, headS=?y, neg='no', nr=?anon7, pers=[?anon6, ?anon6], pf='no', pg='no', tense='pt', val='iv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pt,?x.agt=?y,?x.is_a=go
+verb -> 'goes'
+	[h=[aux='no', cat='verb', head=?x, headS=?y, neg='no', nr='sg', pers=[?anon5, 3], pf='no', pg='no', tense='pr', val='iv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=go
+verb -> 'go'
+	[h=[aux='no', cat='verb', head=?x, headS=?y, neg='no', nr='pl', pers=[?anon2, ?anon2], pf='no', pg='no', tense='pr', val='iv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=go
+verb -> 'go'
+	[h=[aux='no', cat='verb', head=?x, headS=?y, neg='no', nr='sg', pers=[?anon1, 'n3'], pf='no', pg='no', tense='pr', val='iv', vf='no', vft='fin', voice='act', vtype='norm']]
+	?x.tense=pr,?x.agt=?y,?x.is_a=go
+verb -> 'go'
+	[h=[aux='no', cat='verb', head=?x, headS=?y, neg='no', pf='no', pg='no', val='iv', vf='bse', vft='nfin', voice='act', vtype='norm']]
+	?x.vft=bse,?x.is_a=go,?x.agt=?y
+verb -> 'go'
+	[h=[aux='no', cat='verb', head=?x, headS=?y, val='iv', vf='bse', vft='nf', voice='act', vtype='norm']]
+	?x.agt=?y,?x.is_a=go
+aux -> 'did'
+	[h=[aux='do', cat='aux', head=?x, neg='no', nr=?anon16, pers=[?anon15, ?anon15], pf='no', pg='no', tense='pt', vft='fin', vtype='aux']]
+	?x.tense=pt
+aux -> 'does'
+	[h=[aux='do', cat='aux', head=?x, neg='no', nr='sg', pers=[?anon14, 3], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr
+aux -> 'do'
+	[h=[aux='do', cat='aux', head=?x, neg='no', nr='pl', pers=[?anon13, ?anon13], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr
+aux -> 'do'
+	[h=[aux='do', cat='aux', head=?x, neg='no', nr='sg', pers=[?anon12, 'n3'], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr
+aux -> "didn't"
+	[h=[aux='do', cat='aux', head=?x, neg='y', nr=?anon14, pers=[?anon13, ?anon13], pf='no', pg='no', tense='pt', vft='fin', vtype='aux']]
+	?x.tense=pt,?x.neg=y
+aux -> "doesn't"
+	[h=[aux='do', cat='aux', head=?x, neg='y', nr='sg', pers=[?anon12, 3], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr,?x.neg=y
+aux -> "don't"
+	[h=[aux='do', cat='aux', head=?x, neg='y', nr='sg', pers=[?anon11, 'n3'], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr,?x.neg=y
+aux -> "don't"
+	[h=[aux='do', cat='aux', head=?x, neg='y', nr='pl', pers=[?anon10, ?anon10], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr,?x.neg=y
+aux -> 'can'
+	[h=[aux='mod', cat='aux', head=?x, neg='no', nr=?anon4, pers=[?anon3, ?anon3], pf='no', pg='no', tense='mod', vft='fin', vtype='aux']]
+	?x.mod=can
+aux -> 'will'
+	[h=[aux='mod', cat='aux', head=?x, neg='no', nr=?anon2, pers=[?anon1, ?anon1], pf='no', pg='no', tense='mod', vft='fin', vtype='aux']]
+	?x.mod=will
+aux -> 'cannot'
+	[h=[aux='mod', cat='aux', head=?x, neg='y', nr=?anon6, pers=[?anon5, ?anon5], pf='no', pg='no', tense='mod', vft='fin', vtype='aux']]
+	?x.mod=can,?x.neg=y
+aux -> "can't"
+	[h=[aux='mod', cat='aux', head=?x, neg='y', nr=?anon4, pers=[?anon3, ?anon3], pf='no', pg='no', tense='mod', vft='fin', vtype='aux']]
+	?x.mod=can,?x.neg=y
+aux -> "won't"
+	[h=[aux='mod', cat='aux', head=?x, neg='y', nr=?anon2, pers=[?anon1, ?anon1], pf='no', pg='no', tense='mod', vft='fin', vtype='aux']]
+	?x.mod=will,?x.neg=y
+aux -> 'having'
+	[h=[aux='have', cat='aux', head=?x, neg='no', pf='no', pg='no', vf='ing', vft='nfin', vtype='aux']]
+	?x.vft=ing
+aux -> 'having'
+	[h=[aux='have', cat='aux', head=?x, pg='y', vf='ing', vft='nf', vtype='aux']]
+	?x.pg=y
+aux -> 'had'
+	[h=[aux='have', cat='aux', head=?x, neg='no', nr=?anon11, pers=[?anon10, ?anon10], pf='no', pg='no', tense='pt', vft='fin', vtype='aux']]
+	?x.tense=pt
+aux -> 'has'
+	[h=[aux='have', cat='aux', head=?x, neg='no', nr='sg', pers=[?anon9, 3], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr
+aux -> 'have'
+	[h=[aux='have', cat='aux', head=?x, neg='no', nr='pl', pers=[?anon8, ?anon8], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr
+aux -> 'have'
+	[h=[aux='have', cat='aux', head=?x, neg='no', nr='sg', pers=[?anon5, 'n3'], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr
+aux -> 'have'
+	[h=[aux='have', cat='aux', head=?x, vf='bse', vft='nf', vtype='aux']]
+	?x.bse=have
+aux -> "hadn't"
+	[h=[aux='have', cat='aux', head=?x, neg='y', nr=?anon9, pers=[?anon8, ?anon8], pf='no', pg='no', tense='pt', vft='fin', vtype='aux']]
+	?x.tense=pt,?x.neg=y
+aux -> "hasn't"
+	[h=[aux='have', cat='aux', head=?x, neg='y', nr='sg', pers=[?anon7, 3], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr,?x.neg=y
+aux -> "haven't"
+	[h=[aux='have', cat='aux', head=?x, neg='y', nr='pl', pers=[?anon6, ?anon6], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr,?x.neg=y
+aux -> "haven't"
+	[h=[aux='have', cat='aux', head=?x, neg='y', nr='sg', pers=[?anon5, 'n3'], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr,?x.neg=y
+aux -> 'been'
+	[h=[aux='be', cat='aux', head=?x, pf='y', vf='ed', vft='nf', vtype='aux']]
+	?x.pf=y
+aux -> 'being'
+	[h=[aux='be', cat='aux', head=?x, neg='no', pf='no', pg='no', vf='ing', vft='nfin', vtype='aux']]
+	?x.vft=ing
+aux -> 'being'
+	[h=[aux='be', cat='aux', head=?x, pg='y', vf='ing', vft='nf', vtype='aux']]
+	?x.pg=y
+aux -> 'were'
+	[h=[aux='be', cat='aux', head=?x, neg='no', nr='pl', pers=[?anon4, ?anon4], pf='no', pg='no', tense='pt', vft='fin', vtype='aux']]
+	?x.tense=pt
+aux -> 'were'
+	[h=[aux='be', cat='aux', head=?x, neg='no', nr='sg', pers=[2, 'n3'], pf='no', pg='no', tense='pt', vft='fin', vtype='aux']]
+	?x.tense=pt
+aux -> 'was'
+	[h=[aux='be', cat='aux', head=?x, neg='no', nr='sg', pers=[?anon3, 3], pf='no', pg='no', tense='pt', vft='fin', vtype='aux']]
+	?x.tense=pt
+aux -> 'was'
+	[h=[aux='be', cat='aux', head=?x, neg='no', nr='sg', pers=[1, 'n3'], pf='no', pg='no', tense='pt', vft='fin', vtype='aux']]
+	?x.tense=pt
+aux -> 'is'
+	[h=[aux='be', cat='aux', head=?x, neg='no', nr='sg', pers=[?anon2, 3], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr
+aux -> 'are'
+	[h=[aux='be', cat='aux', head=?x, neg='no', nr='pl', pers=[?anon1, ?anon1], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr
+aux -> 'are'
+	[h=[aux='be', cat='aux', head=?x, neg='no', nr='sg', pers=[2, 'n3'], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr
+aux -> 'am'
+	[h=[aux='be', cat='aux', head=?x, neg='no', nr='sg', pers=[1, 'n3'], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr
+aux -> 'be'
+	[h=[aux='be', cat='aux', head=?x, vf='bse', vft='nf', vtype='aux']]
+	?x.bse=be
+aux -> 'to'
+	[h=[aux='to', cat='aux', head=?x, neg='no', pf='no', pg='no', vf='to', vft='nfin', vtype='aux']]
+	?x.vft=to
+aux -> 'not'
+	[h=[aux='not', cat='aux', head=?x, neg='y', vtype='aux']]
+	?x.neg=y
+aux -> "weren't"
+	[h=[aux='be', cat='aux', head=?x, neg='y', nr='pl', pers=[?anon4, ?anon4], pf='no', pg='no', tense='pt', vft='fin', vtype='aux']]
+	?x.tense=pt,?x.neg=y
+aux -> "weren't"
+	[h=[aux='be', cat='aux', head=?x, neg='y', nr='sg', pers=[2, 'n3'], pf='no', pg='no', tense='pt', vft='fin', vtype='aux']]
+	?x.tense=pt,?x.neg=y
+aux -> "wasn't"
+	[h=[aux='be', cat='aux', head=?x, neg='y', nr='sg', pers=[?anon3, 3], pf='no', pg='no', tense='pt', vft='fin', vtype='aux']]
+	?x.tense=pt,?x.neg=y
+aux -> "wasn't"
+	[h=[aux='be', cat='aux', head=?x, neg='y', nr='sg', pers=[1, 'n3'], pf='no', pg='no', tense='pt', vft='fin', vtype='aux']]
+	?x.tense=pt,?x.neg=y
+aux -> "isn't"
+	[h=[aux='be', cat='aux', head=?x, neg='y', nr='sg', pers=[?anon2, 3], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr,?x.neg=y
+aux -> "aren't"
+	[h=[aux='be', cat='aux', head=?x, neg='y', nr='pl', pers=[?anon1, ?anon1], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr,?x.neg=y
+aux -> "aren't"
+	[h=[aux='be', cat='aux', head=?x, neg='y', nr='sg', pers=[2, 'n3'], pf='no', pg='no', tense='pr', vft='fin', vtype='aux']]
+	?x.tense=pr,?x.neg=y
+pn -> 'Spain'
+	[h=[case=[?anon26, 'ng'], cat='pn', det='y', dets='y', gen='neutr', head=?x, hum='y', modr='no', nr='sg', pers=[?anon25, 3]]]
+	?x.name=Spain
+pn -> 'Shakespeare'
+	[h=[case=[?anon24, 'ng'], cat='pn', det='y', dets='y', gen='male', head=?x, hum='y', modr='no', nr='sg', pers=[?anon23, 3]]]
+	?x.name=Shakespeare
+pn -> 'Rome'
+	[h=[case=[?anon22, 'ng'], cat='pn', det='y', dets='y', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon21, 3]]]
+	?x.name=Rome
+pn -> 'House'
+	[h=[case=[?anon20, 'ng'], cat='pn', det='y', dets='y', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon19, 3]]]
+	?x.name=House
+pn -> 'Dana'
+	[h=[case=[?anon18, 'ng'], cat='pn', det='y', dets='y', gen='fem', head=?x, hum='y', modr='no', nr='sg', pers=[?anon17, 3]]]
+	?x.name=Dana
+pn -> 'Sandy'
+	[h=[case=[?anon16, 'ng'], cat='pn', det='y', dets='y', gen='fem', head=?x, hum='y', modr='no', nr='sg', pers=[?anon15, 3]]]
+	?x.name=Sandy
+pn -> 'Kim'
+	[h=[case=[?anon14, 'ng'], cat='pn', det='y', dets='y', gen='fem', head=?x, hum='y', modr='no', nr='sg', pers=[?anon13, 3]]]
+	?x.name=Kim
+pn -> 'Leslie'
+	[h=[case=[?anon12, 'ng'], cat='pn', det='y', dets='y', gen='fem', head=?x, hum='y', modr='no', nr='sg', pers=[?anon11, 3]]]
+	?x.name=Leslie
+pn -> 'Pat'
+	[h=[case=[?anon10, 'ng'], cat='pn', det='y', dets='y', gen='fem', head=?x, hum='y', modr='no', nr='sg', pers=[?anon9, 3]]]
+	?x.name=Pat
+pn -> 'mary'
+	[h=[case=[?anon8, 'ng'], cat='pn', det='y', dets='y', gen='fem', head=?x, hum='y', modr='no', nr='sg', pers=[?anon7, 3]]]
+	?x.name=mary
+pn -> 'john'
+	[h=[case=[?anon6, 'ng'], cat='pn', det='y', dets='y', gen='male', head=?x, hum='y', modr='no', nr='sg', pers=[?anon5, 3]]]
+	?x.name=john
+pn -> 'jules'
+	[h=[case=[?anon4, 'ng'], cat='pn', det='y', dets='y', gen='male', head=?x, hum='y', modr='no', nr='sg', pers=[?anon3, 3]]]
+	?x.name=jules
+pn -> 'jody'
+	[h=[case=[?anon2, 'ng'], cat='pn', det='y', dets='y', gen='fem', head=?x, hum='y', modr='no', nr='sg', pers=[?anon1, 3]]]
+	?x.name=jody
+noun -> 'books'
+	[h=[case=[?anon88, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon87, 3]]]
+	?x.is_a=books
+noun -> 'books'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=books,?y.Has_prop=?x
+noun -> 'book'
+	[h=[case=[?anon86, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon85, 3]]]
+	?x.is_a=book
+noun -> 'book'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=book,?y.Has_prop=?x
+noun -> 'boy'
+	[h=[case=[?anon84, 'ng'], cat='noun', count='y', det='no', gen='male', head=?x, hum='y', modr='no', nr='sg', pers=[?anon83, 3]]]
+	?x.is_a=boy
+noun -> 'boy'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=boy,?y.Has_prop=?x
+noun -> 'man'
+	[h=[case=[?anon82, 'ng'], cat='noun', count='y', det='no', gen='male', head=?x, hum='y', modr='no', nr='sg', pers=[?anon81, 3]]]
+	?x.is_a=man
+noun -> 'man'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=man,?y.Has_prop=?x
+noun -> 'boys'
+	[h=[case=[?anon80, 'ng'], cat='noun', count='y', det='no', gen='male', head=?x, hum='y', modr='no', nr='pl', pers=[?anon79, 3]]]
+	?x.is_a=boys
+noun -> 'boys'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=boys,?y.Has_prop=?x
+noun -> 'men'
+	[h=[case=[?anon78, 'ng'], cat='noun', count='y', det='no', gen='male', head=?x, hum='y', modr='no', nr='pl', pers=[?anon77, 3]]]
+	?x.is_a=men
+noun -> 'men'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=men,?y.Has_prop=?x
+noun -> 'elephants'
+	[h=[case=[?anon76, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon75, 3]]]
+	?x.is_a=elephants
+noun -> 'elephants'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=elephants,?y.Has_prop=?x
+noun -> 'treatments'
+	[h=[case=[?anon74, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon73, 3]]]
+	?x.is_a=treatments
+noun -> 'treatments'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=treatments,?y.Has_prop=?x
+noun -> 'girls'
+	[h=[case=[?anon72, 'ng'], cat='noun', count='y', det='no', gen='fem', head=?x, hum='y', modr='no', nr='pl', pers=[?anon71, 3]]]
+	?x.is_a=girls
+noun -> 'girls'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=girls,?y.Has_prop=?x
+noun -> 'pencils'
+	[h=[case=[?anon70, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon69, 3]]]
+	?x.is_a=pencils
+noun -> 'pencils'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=pencils,?y.Has_prop=?x
+noun -> 'books'
+	[h=[case=[?anon68, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon67, 3]]]
+	?x.is_a=books
+noun -> 'boys'
+	[h=[case=[?anon66, 'ng'], cat='noun', count='y', det='no', gen='male', head=?x, hum='y', modr='no', nr='pl', pers=[?anon65, 3]]]
+	?x.is_a=boys
+noun -> 'speech'
+	[h=[case=[?anon64, 'ng'], cat='noun', count='no', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon63, 3]]]
+	?x.is_a=speech
+noun -> 'speech'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=speech,?y.Has_prop=?x
+noun -> 'particles'
+	[h=[case=[?anon62, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon61, 3]]]
+	?x.is_a=particles
+noun -> 'particles'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=particles,?y.Has_prop=?x
+noun -> 'doors'
+	[h=[case=[?anon60, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon59, 3]]]
+	?x.is_a=doors
+noun -> 'doors'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=doors,?y.Has_prop=?x
+noun -> 'closets'
+	[h=[case=[?anon58, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon57, 3]]]
+	?x.is_a=closets
+noun -> 'closets'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=closets,?y.Has_prop=?x
+noun -> 'tables'
+	[h=[case=[?anon56, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon55, 3]]]
+	?x.is_a=tables
+noun -> 'tables'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=tables,?y.Has_prop=?x
+noun -> 'diseases'
+	[h=[case=[?anon54, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon53, 3]]]
+	?x.is_a=diseases
+noun -> 'diseases'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=diseases,?y.Has_prop=?x
+noun -> 'men'
+	[h=[case=[?anon52, 'ng'], cat='noun', count='y', det='no', gen='male', head=?x, hum='y', modr='no', nr='pl', pers=[?anon51, 3]]]
+	?x.is_a=men
+noun -> 'demos'
+	[h=[case=[?anon50, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon49, 3]]]
+	?x.is_a=demos
+noun -> 'demos'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=demos,?y.Has_prop=?x
+noun -> 'posters'
+	[h=[case=[?anon48, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon47, 3]]]
+	?x.is_a=posters
+noun -> 'posters'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=posters,?y.Has_prop=?x
+noun -> 'papers'
+	[h=[case=[?anon46, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon45, 3]]]
+	?x.is_a=papers
+noun -> 'papers'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=papers,?y.Has_prop=?x
+noun -> 'pustules'
+	[h=[case=[?anon44, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon43, 3]]]
+	?x.is_a=pustules
+noun -> 'pustules'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=pustules,?y.Has_prop=?x
+noun -> 'papules'
+	[h=[case=[?anon42, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon41, 3]]]
+	?x.is_a=papules
+noun -> 'papules'
+	[h=[cat='noun', head=?x, mod=?y, nr='pl']]
+	?x.is_a=papules,?y.Has_prop=?x
+noun -> 'afternoon'
+	[h=[case=[?anon40, 'ng'], cat='noun', count='no', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon39, 3]]]
+	?x.is_a=afternoon
+noun -> 'afternoon'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=afternoon,?y.Has_prop=?x
+noun -> 'elephant'
+	[h=[case=[?anon38, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon37, 3]]]
+	?x.is_a=elephant
+noun -> 'elephant'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=elephant,?y.Has_prop=?x
+noun -> 'treatment'
+	[h=[case=[?anon36, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon35, 3]]]
+	?x.is_a=treatment
+noun -> 'treatment'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=treatment,?y.Has_prop=?x
+noun -> 'girl'
+	[h=[case=[?anon34, 'ng'], cat='noun', count='y', det='no', gen='fem', head=?x, hum='y', modr='no', nr='sg', pers=[?anon33, 3]]]
+	?x.is_a=girl
+noun -> 'girl'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=girl,?y.Has_prop=?x
+noun -> 'pencil'
+	[h=[case=[?anon32, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon31, 3]]]
+	?x.is_a=pencil
+noun -> 'pencil'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=pencil,?y.Has_prop=?x
+noun -> 'book'
+	[h=[case=[?anon30, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon29, 3]]]
+	?x.is_a=book
+noun -> 'boy'
+	[h=[case=[?anon28, 'ng'], cat='noun', count='y', det='no', gen='male', head=?x, hum='y', modr='no', nr='sg', pers=[?anon27, 3]]]
+	?x.is_a=boy
+noun -> 'speech'
+	[h=[case=[?anon26, 'ng'], cat='noun', count='no', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon25, 3]]]
+	?x.is_a=speech
+noun -> 'particles'
+	[h=[case=[?anon24, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='pl', pers=[?anon23, 3]]]
+	?x.is_a=particles
+noun -> 'particle'
+	[h=[case=[?anon22, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon21, 3]]]
+	?x.is_a=particle
+noun -> 'particle'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=particle,?y.Has_prop=?x
+noun -> 'door'
+	[h=[case=[?anon20, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon19, 3]]]
+	?x.is_a=door
+noun -> 'door'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=door,?y.Has_prop=?x
+noun -> 'closet'
+	[h=[case=[?anon18, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon17, 3]]]
+	?x.is_a=closet
+noun -> 'closet'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=closet,?y.Has_prop=?x
+noun -> 'table'
+	[h=[case=[?anon16, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon15, 3]]]
+	?x.is_a=table
+noun -> 'table'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=table,?y.Has_prop=?x
+noun -> 'skin'
+	[h=[case=[?anon14, 'ng'], cat='noun', count='no', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon13, 3]]]
+	?x.is_a=skin
+noun -> 'skin'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=skin,?y.Has_prop=?x
+noun -> 'disease'
+	[h=[case=[?anon12, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon11, 3]]]
+	?x.is_a=disease
+noun -> 'disease'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=disease,?y.Has_prop=?x
+noun -> 'man'
+	[h=[case=[?anon10, 'ng'], cat='noun', count='y', det='no', gen='male', head=?x, hum='y', modr='no', nr='sg', pers=[?anon9, 3]]]
+	?x.is_a=man
+noun -> 'demo'
+	[h=[case=[?anon8, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon7, 3]]]
+	?x.is_a=demo
+noun -> 'demo'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=demo,?y.Has_prop=?x
+noun -> 'poster'
+	[h=[case=[?anon6, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon5, 3]]]
+	?x.is_a=poster
+noun -> 'poster'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=poster,?y.Has_prop=?x
+noun -> 'paper'
+	[h=[case=[?anon4, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon3, 3]]]
+	?x.is_a=paper
+noun -> 'paper'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=paper,?y.Has_prop=?x
+noun -> 'angina'
+	[h=[case=[?anon2, 'ng'], cat='noun', count='y', det='no', gen='neutr', head=?x, hum='no', modr='no', nr='sg', pers=[?anon1, 3]]]
+	?x.is_a=angina
+noun -> 'angina'
+	[h=[cat='noun', head=?x, mod=?y, nr='sg']]
+	?x.is_a=angina,?y.Has_prop=?x
+adj -> 'persistent'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=persistent,?y.Has_prop=?x
+adj -> 'toxic'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=toxic,?y.Has_prop=?x
+adj -> 'graduate'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=graduate,?y.Has_prop=?x
+adj -> 'smart'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=smart,?y.Has_prop=?x
+adj -> 'loud'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=loud,?y.Has_prop=?x
+adj -> 'clear'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=clear,?y.Has_prop=?x
+adj -> 'endocrine'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=endocrine,?y.Has_prop=?x
+adj -> 'other'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=other,?y.Has_prop=?x
+adj -> 'prone'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=prone,?y.Has_prop=?x
+adj -> 'happy'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=happy,?y.Has_prop=?x
+adj -> 'enough'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=enough,?y.Has_prop=?x
+adj -> 'small'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=small,?y.Has_prop=?x
+adj -> 'disruptive'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=disruptive,?y.Has_prop=?x
+adj -> 'aggressive'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=aggressive,?y.Has_prop=?x
+adj -> 'good'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=good,?y.Has_prop=?x
+adj -> 'rare'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=rare,?y.Has_prop=?x
+adj -> 'handsome'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=handsome,?y.Has_prop=?x
+adj -> 'calm'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=calm,?y.Has_prop=?x
+adj -> 'large'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=large,?y.Has_prop=?x
+adj -> 'cytoplasmic'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=cytoplasmic,?y.Has_prop=?x
+adj -> 'heterogeneous'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=heterogeneous,?y.Has_prop=?x
+adj -> 'sound'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=sound,?y.Has_prop=?x
+adj -> 'young'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=young,?y.Has_prop=?x
+adj -> 'art'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=art,?y.Has_prop=?x
+adj -> 'short'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=short,?y.Has_prop=?x
+adj -> 'technical'
+	[h=[cat='adj', head=?x, mod=?y]]
+	?x.is_a=technical,?y.Has_prop=?x
+det -> 'every'
+	[h=[cat='det', mod=?x, nr='sg']]
+	?x.det=every
+det -> 'all'
+	[h=[cat='det', mod=?x, nr='pl']]
+	?x.det=all
+det -> 'the'
+	[h=[cat='det', mod=?x, nr=?anon1]]
+	?x.det=the
+det -> 'an'
+	[h=[cat='det', mod=?x, nr='sg']]
+	?x.det=an
+det -> 'a'
+	[h=[cat='det', mod=?x, nr='sg']]
+	?x.det=a
+iprep -> "'"
+	[h=[case=[?anon2, 'g'], cat='iprep', head=?x, mod=?y]]
+	?y.of=?x
+iprep -> "'s"
+	[h=[case=[?anon1, 'g'], cat='iprep', head=?x, mod=?y]]
+	?y.of=?x
+apro -> 'which'
+	[h=[case=[?anon33, 'ng'], cat='apro', det='y', head=?x, mod=?y]]
+	?y.?anon30=?x,?x.is_a=which
+apro -> 'which'
+	[h=[case=[?anon27, 'ng'], cat='apro', det='y', head=?x, mod=?y]]
+	?y.?anon24=?x,?x.is_a=which
+apro -> 'whose'
+	[h=[case=[?anon21, 'g'], cat='apro', det='y', head=?x, mod=?y]]
+	?y.of=?x,?x.is_a=whose
+apro -> 'their'
+	[h=[case=[?anon16, 'g'], cat='apro', det='y', head=?x, mod=?y]]
+	?y.of=?x,?x.is_a=their
+apro -> 'our'
+	[h=[case=[?anon13, 'g'], cat='apro', det='y', head=?x, mod=?y]]
+	?y.of=?x,?x.is_a=our
+apro -> 'its'
+	[h=[case=[?anon12, 'g'], cat='apro', det='y', head=?x, mod=?y]]
+	?y.of=?x,?x.is_a=its
+apro -> 'her'
+	[h=[case=[?anon10, 'g'], cat='apro', det='y', head=?x, mod=?y]]
+	?y.of=?x,?x.is_a=her
+apro -> 'her'
+	[h=[case=['a', 'ng'], cat='apro', det='y', head=?x, mod=?y]]
+	?y.of=?x,?x.is_a=her
+apro -> 'his'
+	[h=[case=[?anon7, 'g'], cat='apro', det='y', head=?x, mod=?y]]
+	?y.of=?x,?x.is_a=his
+apro -> 'your'
+	[h=[case=[?anon4, 'g'], cat='apro', det='y', head=?x, mod=?y]]
+	?y.of=?x,?x.is_a=your
+apro -> 'my'
+	[h=[case=[?anon1, 'g'], cat='apro', det='y', head=?x, mod=?y]]
+	?y.of=?x,?x.is_a=my
